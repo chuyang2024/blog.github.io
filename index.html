@@ -112,7 +112,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -130,6 +130,125 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/09/15/%E5%90%8E%E7%AB%AF%E6%A1%88%E4%BE%8B1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="chuYang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/09/15/%E5%90%8E%E7%AB%AF%E6%A1%88%E4%BE%8B1/" class="post-title-link" itemprop="url">Untitled</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2024-09-15 18:37:33" itemprop="dateCreated datePublished" datetime="2024-09-15T18:37:33+08:00">2024-09-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2024-09-16 14:23:10" itemprop="dateModified" datetime="2024-09-16T14:23:10+08:00">2024-09-16</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="开发实操"><a href="#开发实操" class="headerlink" title="开发实操"></a>开发实操</h1><p>data:2024-09-15 18:41:30</p>
+<h3 id="开发规范"><a href="#开发规范" class="headerlink" title="开发规范"></a>开发规范</h3><h4 id="1-基于前后端分离开发"><a href="#1-基于前后端分离开发" class="headerlink" title="1.基于前后端分离开发"></a>1.基于前后端分离开发</h4><img src="D:\Java\tool\myBlog\image\image-20240915184105669.png" alt="image-20240915184105669" style="zoom:67%;" />
+
+<h4 id="2-Restful"><a href="#2-Restful" class="headerlink" title="2.Restful"></a>2.Restful</h4><p>​	表述性状态转换，一种软件架构风格</p>
+<img src="D:\Java\tool\myBlog\image\image-20240915184329884.png" alt="image-20240915184329884" style="zoom: 67%;" />
+
+<p>​	restful是传统风格的规范化，URL定位资源，http动词(get,post…)描述操作</p>
+<p>加s表示此类资源；前后端使用result作为返回对象</p>
+<img src="D:\Java\tool\myBlog\image\image-20240915184447873.png" alt="image-20240915184447873" style="zoom: 67%;" />
+
+
+
+<h3 id="开发流程"><a href="#开发流程" class="headerlink" title="开发流程"></a>开发流程</h3><p>​	查看页面原型明确需求</p>
+<p>​	阅读接口文档</p>
+<p>​	思路分析</p>
+<p>​	接口开发</p>
+<p>​	接口测试</p>
+<p>​	前后端联调</p>
+<h3 id="具体功能实现"><a href="#具体功能实现" class="headerlink" title="具体功能实现"></a>具体功能实现</h3><h4 id="1-部门管理"><a href="#1-部门管理" class="headerlink" title="1.部门管理"></a>1.部门管理</h4><p>​	日志管理</p>
+<p>​	可以创建Logger对象来规范化日志，也可以使用@Slf4j对象；</p>
+<p>​	配合配置文件来实现输出至控制台；</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="type">Logger</span> <span class="variable">log</span> <span class="operator">=</span> LoggerFactory.getLogger(DeptController.class);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#配置mybatis的日志, 指定输出到控制台</span></span><br><span class="line"><span class="attr">mybatis.configuration.log-impl</span>=<span class="string">org.apache.ibatis.logging.stdout.StdOutImpl</span></span><br></pre></td></tr></table></figure>
+
+<p>​	规范化输出，Result输出文件，统一前后端通信</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="meta">@NoArgsConstructor</span></span><br><span class="line"><span class="meta">@AllArgsConstructor</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Result</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> Integer code;<span class="comment">//响应码，1 代表成功; 0 代表失败</span></span><br><span class="line">    <span class="keyword">private</span> String msg;  <span class="comment">//响应信息 描述字符串</span></span><br><span class="line">    <span class="keyword">private</span> Object data; <span class="comment">//返回的数据</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//增删改 成功响应</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> Result <span class="title function_">success</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Result</span>(<span class="number">1</span>,<span class="string">&quot;success&quot;</span>,<span class="literal">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//查询 成功响应</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> Result <span class="title function_">success</span><span class="params">(Object data)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Result</span>(<span class="number">1</span>,<span class="string">&quot;success&quot;</span>,data);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//失败响应</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> Result <span class="title function_">error</span><span class="params">(String msg)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Result</span>(<span class="number">0</span>,msg,<span class="literal">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;timestamp&quot;: &quot;2024-09-15T12:23:58.246+00:00&quot;,</span><br><span class="line">    &quot;status&quot;: 405,</span><br><span class="line">    &quot;error&quot;: &quot;Method Not Allowed&quot;,</span><br><span class="line">    &quot;path&quot;: &quot;/depts&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="1-查询部门"><a href="#1-查询部门" class="headerlink" title="1.查询部门"></a>1.查询部门</h5><p>​	先从控制器层(controller层) 响应前端get请求开始，记录日志信息，调用service接口方法list</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Autowired</span><span class="comment">//自动注入private DeptService deptService;</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@GetMapping(&quot;depts&quot;)</span> <span class="comment">//指定请求类型的注解</span></span><br><span class="line"><span class="keyword">public</span> Result <span class="title function_">list</span><span class="params">()</span> &#123;</span><br><span class="line">    log.info(<span class="string">&quot;查询全部部门数据&quot;</span>);</span><br><span class="line">    <span class="comment">//调用service 查询 部门数据</span></span><br><span class="line">    List&lt;Dept&gt; deptList = deptService.list();</span><br><span class="line">    <span class="keyword">return</span> Result.success(deptList);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​	(service层，业务逻辑层，存放业务逻辑处理，不直接对数据库进行操作，有接口和接口实现类，提供controller层调用的方法。)</p>
+<p>​	在实现类里重写实现方法，将获取的数据自动注入，调用mapper层方法，获取数据库数据</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="keyword">private</span> DeptMapper deptMapper;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> List&lt;Dept&gt; <span class="title function_">list</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> deptMapper.list();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​	实际上与数据库交互的mapper层，获取数据库数据的方法，自动装填到IOC容器，</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Mapper</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">DeptMapper</span> &#123;</span><br><span class="line">    <span class="comment">//再次查询</span></span><br><span class="line">    <span class="meta">@Select(&quot;select * from dept&quot;)</span></span><br><span class="line">    List&lt;Dept&gt; <span class="title function_">list</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​	然后再一路回调到controller层，调用Result方法响应前端请求；</p>
+<h5 id="2-前后端联调"><a href="#2-前后端联调" class="headerlink" title="2.前后端联调"></a>2.前后端联调</h5><p>​	结合开发的前端环境来调试后端程序</p>
+<h5 id="3-删除部门"><a href="#3-删除部门" class="headerlink" title="3.删除部门"></a>3.删除部门</h5><h5 id="4-新增部门"><a href="#4-新增部门" class="headerlink" title="4.新增部门"></a>4.新增部门</h5>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
