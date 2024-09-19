@@ -26,14 +26,20 @@
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="开发实操data:2024-09-15 18:41:30 开发规范1.基于前后端分离开发  2.Restful​	表述性状态转换，一种软件架构风格   ​	restful是传统风格的规范化，URL定位资源，http动词(get,post…)描述操作 加s表示此类资源；前后端使用result作为返回对象     开发流程​	查看页面原型明确需求 ​	阅读接口文档 ​	思路分析 ​	接口开发 ​	接口">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="d:\Java\tool\myBlog\image\image-20240915184105669.png">
-<meta property="og:image" content="d:\Java\tool\myBlog\image\image-20240915184329884.png">
-<meta property="og:image" content="d:\Java\tool\myBlog\image\image-20240915184447873.png">
+<meta property="og:image" content="d:\Java\tool\myBlog\blog\public\images\image-20240915184105669.png">
+<meta property="og:image" content="d:\Java\tool\myBlog\blog\public\images\image-20240915184329884.png">
+<meta property="og:image" content="d:\Java\tool\myBlog\blog\public\images\image-20240915184447873.png">
+<meta property="og:image" content="d:\Java\tool\myBlog\blog\public\images\image-20240916224741477.png">
+<meta property="og:image" content="d:\Java\tool\myBlog\blog\public\images\image-20240916225921905.png">
+<meta property="og:image" content="d:\Java\tool\myBlog\blog\public\images\image-20240916232956722.png">
+<meta property="og:image" content="d:\Java\tool\myBlog\blog\public\images\image-20240918151337626.png">
+<meta property="og:image" content="d:\Java\tool\myBlog\blog\public\images\image-20240918153059692.png">
+<meta property="og:image" content="d:\Java\tool\myBlog\blog\public\images\image-20240918165112186.png">
 <meta property="article:published_time" content="2024-09-15T10:37:33.813Z">
-<meta property="article:modified_time" content="2024-09-16T06:23:10.891Z">
+<meta property="article:modified_time" content="2024-09-19T08:04:40.226Z">
 <meta property="article:author" content="chuYang">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="d:\Java\tool\myBlog\image\image-20240915184105669.png">
+<meta name="twitter:image" content="d:\Java\tool\myBlog\blog\public\images\image-20240915184105669.png">
 
 
 <link rel="canonical" href="http://example.com/2024/09/15/%E5%90%8E%E7%AB%AF%E6%A1%88%E4%BE%8B1/">
@@ -108,7 +114,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E5%8F%91%E5%AE%9E%E6%93%8D"><span class="nav-number">1.</span> <span class="nav-text">开发实操</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83"><span class="nav-number">1.0.1.</span> <span class="nav-text">开发规范</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%9F%BA%E4%BA%8E%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E5%BC%80%E5%8F%91"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">1.基于前后端分离开发</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Restful"><span class="nav-number">1.0.1.2.</span> <span class="nav-text">2.Restful</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B"><span class="nav-number">1.0.2.</span> <span class="nav-text">开发流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B7%E4%BD%93%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.0.3.</span> <span class="nav-text">具体功能实现</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E9%83%A8%E9%97%A8%E7%AE%A1%E7%90%86"><span class="nav-number">1.0.3.1.</span> <span class="nav-text">1.部门管理</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E6%9F%A5%E8%AF%A2%E9%83%A8%E9%97%A8"><span class="nav-number">1.0.3.1.1.</span> <span class="nav-text">1.查询部门</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E5%89%8D%E5%90%8E%E7%AB%AF%E8%81%94%E8%B0%83"><span class="nav-number">1.0.3.1.2.</span> <span class="nav-text">2.前后端联调</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%E5%88%A0%E9%99%A4%E9%83%A8%E9%97%A8"><span class="nav-number">1.0.3.1.3.</span> <span class="nav-text">3.删除部门</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-%E6%96%B0%E5%A2%9E%E9%83%A8%E9%97%A8"><span class="nav-number">1.0.3.1.4.</span> <span class="nav-text">4.新增部门</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E5%8F%91%E5%AE%9E%E6%93%8D"><span class="nav-number">1.</span> <span class="nav-text">开发实操</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83"><span class="nav-number">1.0.1.</span> <span class="nav-text">开发规范</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%9F%BA%E4%BA%8E%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E5%BC%80%E5%8F%91"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">1.基于前后端分离开发</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Restful"><span class="nav-number">1.0.1.2.</span> <span class="nav-text">2.Restful</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B"><span class="nav-number">1.0.2.</span> <span class="nav-text">开发流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B7%E4%BD%93%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.0.3.</span> <span class="nav-text">具体功能实现</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E9%83%A8%E9%97%A8%E7%AE%A1%E7%90%86"><span class="nav-number">1.0.3.1.</span> <span class="nav-text">1.部门管理</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E6%9F%A5%E8%AF%A2%E9%83%A8%E9%97%A8"><span class="nav-number">1.0.3.1.1.</span> <span class="nav-text">1.查询部门</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E5%89%8D%E5%90%8E%E7%AB%AF%E8%81%94%E8%B0%83"><span class="nav-number">1.0.3.1.2.</span> <span class="nav-text">2.前后端联调</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%E5%88%A0%E9%99%A4%E9%83%A8%E9%97%A8"><span class="nav-number">1.0.3.1.3.</span> <span class="nav-text">3.删除部门</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%98%8E%E7%A1%AE%E9%9C%80%E6%B1%82"><span class="nav-number">1.0.3.1.3.1.</span> <span class="nav-text">明确需求</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-%E6%96%B0%E5%A2%9E%E9%83%A8%E9%97%A8"><span class="nav-number">1.0.3.1.4.</span> <span class="nav-text">4.新增部门</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%98%8E%E7%A1%AE%E9%9C%80%E6%B1%82-1"><span class="nav-number">1.0.3.1.4.1.</span> <span class="nav-text">明确需求</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%93%8D%E5%BA%94%E6%95%B0%E6%8D%AE"><span class="nav-number">1.0.3.1.4.2.</span> <span class="nav-text">响应数据</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.0.3.1.4.3.</span> <span class="nav-text">具体实现</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-%E4%BF%AE%E6%94%B9%E9%83%A8%E9%97%A8"><span class="nav-number">1.0.3.1.5.</span> <span class="nav-text">5.修改部门</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#6-%E4%B8%80%E4%BA%9B%E5%B0%8F%E7%BB%93"><span class="nav-number">1.0.3.1.6.</span> <span class="nav-text">6.一些小结</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E6%9F%A5%E8%AF%A2%E5%91%98%E5%B7%A5%E7%AE%A1%E7%90%86"><span class="nav-number">1.0.3.2.</span> <span class="nav-text">2.查询员工管理</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E5%91%98%E5%B7%A5%E5%88%97%E8%A1%A8%E6%9F%A5%E8%AF%A2-%E4%BA%86%E8%A7%A3%E5%88%86%E9%A1%B5%E6%9F%A5%E8%AF%A2"><span class="nav-number">1.0.3.2.1.</span> <span class="nav-text">1.员工列表查询-了解分页查询</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2%E5%85%B7%E4%BD%93%E6%80%9D%E8%B7%AF"><span class="nav-number">1.0.3.2.2.</span> <span class="nav-text">2具体思路</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3%E5%B0%8F%E7%BB%93"><span class="nav-number">1.0.3.2.3.</span> <span class="nav-text">3小结</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4%E6%9C%89%E5%85%B3%E5%88%86%E9%A1%B5%E6%8F%92%E4%BB%B6Page-Helper"><span class="nav-number">1.0.3.2.4.</span> <span class="nav-text">4有关分页插件Page Helper</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5%E6%9D%A1%E4%BB%B6%E5%88%86%E9%A1%B5%E6%9F%A5%E8%AF%A2"><span class="nav-number">1.0.3.2.5.</span> <span class="nav-text">5条件分页查询</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#6%E4%BD%BF%E7%94%A8%E5%8A%A8%E6%80%81SQL"><span class="nav-number">1.0.3.2.6.</span> <span class="nav-text">6使用动态SQL</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3%E5%88%A0%E9%99%A4%E5%91%98%E5%B7%A5%E7%AE%A1%E7%90%86"><span class="nav-number">1.0.3.3.</span> <span class="nav-text">3删除员工管理</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1%E8%80%83%E8%99%91%E5%8D%95%E4%B8%AA%E5%88%A0%E9%99%A4%E5%92%8C%E6%89%B9%E9%87%8F%E5%88%A0%E9%99%A4%EF%BC%8C%E5%8F%91%E7%8E%B0%E5%8D%95%E4%B8%AA%E5%88%A0%E9%99%A4%E6%98%AF%E6%89%B9%E9%87%8F%E5%88%A0%E9%99%A4%E7%9A%84%E4%B8%80%E7%A7%8D%E6%83%85%E5%86%B5%EF%BC%8C%E4%BB%85%E5%BC%80%E5%8F%91%E6%89%B9%E9%87%8F%E5%88%A0%E9%99%A4%E6%8E%A5%E5%8F%A3"><span class="nav-number">1.0.3.3.1.</span> <span class="nav-text">1考虑单个删除和批量删除，发现单个删除是批量删除的一种情况，仅开发批量删除接口</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2%E6%80%9D%E8%B7%AF"><span class="nav-number">1.0.3.3.2.</span> <span class="nav-text">2思路</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.0.3.3.3.</span> <span class="nav-text">3实现</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4%E6%96%B0%E5%A2%9E%E5%91%98%E5%B7%A5%E7%AE%A1%E7%90%86"><span class="nav-number">1.0.3.4.</span> <span class="nav-text">4新增员工管理</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1%E6%98%8E%E7%A1%AE%E9%9C%80%E6%B1%82%EF%BC%9A"><span class="nav-number">1.0.3.4.1.</span> <span class="nav-text">1明确需求：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2%E5%85%B7%E4%BD%93%E6%80%9D%E8%B7%AF-1"><span class="nav-number">1.0.3.4.2.</span> <span class="nav-text">2具体思路</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3%E5%AE%9E%E7%8E%B0-1"><span class="nav-number">1.0.3.4.3.</span> <span class="nav-text">3实现</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4%E4%BF%AE%E6%94%B9%E5%91%98%E5%B7%A5"><span class="nav-number">1.0.3.5.</span> <span class="nav-text">4修改员工</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1%E9%9C%80%E6%B1%82"><span class="nav-number">1.0.3.5.1.</span> <span class="nav-text">1需求</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2%E6%80%9D%E8%B7%AF-1"><span class="nav-number">1.0.3.5.2.</span> <span class="nav-text">2思路</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.0.3.5.3.</span> <span class="nav-text">3具体实现</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0"><span class="nav-number">1.0.3.6.</span> <span class="nav-text">5文件上传</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1%E7%AE%80%E4%BB%8B"><span class="nav-number">1.0.3.6.1.</span> <span class="nav-text">1简介</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8"><span class="nav-number">1.0.3.6.2.</span> <span class="nav-text">2本地存储</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3%E9%98%BF%E9%87%8C%E4%BA%91OSS"><span class="nav-number">1.0.3.6.3.</span> <span class="nav-text">3阿里云OSS</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5%E4%BF%AE%E6%94%B9%E5%91%98%E5%B7%A5%E6%95%B0%E6%8D%AE"><span class="nav-number">1.0.3.7.</span> <span class="nav-text">5修改员工数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">1.0.3.8.</span> <span class="nav-text">6配置文件</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE%E5%8C%96"><span class="nav-number">1.0.3.8.1.</span> <span class="nav-text">1参数配置化</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2yml%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE%E5%8C%96"><span class="nav-number">1.0.3.8.2.</span> <span class="nav-text">2yml文件配置化</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-ConfigurationProperties"><span class="nav-number">1.0.3.8.3.</span> <span class="nav-text">3@ConfigurationProperties</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -121,7 +127,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -185,7 +191,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-09-16 14:23:10" itemprop="dateModified" datetime="2024-09-16T14:23:10+08:00">2024-09-16</time>
+      <time title="Modified: 2024-09-19 16:04:40" itemprop="dateModified" datetime="2024-09-19T16:04:40+08:00">2024-09-19</time>
     </span>
 
   
@@ -198,14 +204,14 @@
     
     
     <div class="post-body" itemprop="articleBody"><h1 id="开发实操"><a href="#开发实操" class="headerlink" title="开发实操"></a>开发实操</h1><p>data:2024-09-15 18:41:30</p>
-<h3 id="开发规范"><a href="#开发规范" class="headerlink" title="开发规范"></a>开发规范</h3><h4 id="1-基于前后端分离开发"><a href="#1-基于前后端分离开发" class="headerlink" title="1.基于前后端分离开发"></a>1.基于前后端分离开发</h4><img src="D:\Java\tool\myBlog\image\image-20240915184105669.png" alt="image-20240915184105669" style="zoom:67%;" />
+<h3 id="开发规范"><a href="#开发规范" class="headerlink" title="开发规范"></a>开发规范</h3><h4 id="1-基于前后端分离开发"><a href="#1-基于前后端分离开发" class="headerlink" title="1.基于前后端分离开发"></a>1.基于前后端分离开发</h4><img src="D:\Java\tool\myBlog\blog\public\images\image-20240915184105669.png" style="zoom:67%;" />
 
 <h4 id="2-Restful"><a href="#2-Restful" class="headerlink" title="2.Restful"></a>2.Restful</h4><p>​	表述性状态转换，一种软件架构风格</p>
-<img src="D:\Java\tool\myBlog\image\image-20240915184329884.png" alt="image-20240915184329884" style="zoom: 67%;" />
+<img src="D:\Java\tool\myBlog\blog\public\images\image-20240915184329884.png" style="zoom:67%;" />
 
 <p>​	restful是传统风格的规范化，URL定位资源，http动词(get,post…)描述操作</p>
 <p>加s表示此类资源；前后端使用result作为返回对象</p>
-<img src="D:\Java\tool\myBlog\image\image-20240915184447873.png" alt="image-20240915184447873" style="zoom: 67%;" />
+<img src="D:\Java\tool\myBlog\blog\public\images\image-20240915184447873.png" style="zoom:67%;" />
 
 
 
@@ -225,7 +231,7 @@
 <p>​	规范化输出，Result输出文件，统一前后端通信</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="meta">@NoArgsConstructor</span></span><br><span class="line"><span class="meta">@AllArgsConstructor</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Result</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> Integer code;<span class="comment">//响应码，1 代表成功; 0 代表失败</span></span><br><span class="line">    <span class="keyword">private</span> String msg;  <span class="comment">//响应信息 描述字符串</span></span><br><span class="line">    <span class="keyword">private</span> Object data; <span class="comment">//返回的数据</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//增删改 成功响应</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> Result <span class="title function_">success</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Result</span>(<span class="number">1</span>,<span class="string">&quot;success&quot;</span>,<span class="literal">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//查询 成功响应</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> Result <span class="title function_">success</span><span class="params">(Object data)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Result</span>(<span class="number">1</span>,<span class="string">&quot;success&quot;</span>,data);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//失败响应</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> Result <span class="title function_">error</span><span class="params">(String msg)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Result</span>(<span class="number">0</span>,msg,<span class="literal">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;timestamp&quot;: &quot;2024-09-15T12:23:58.246+00:00&quot;,</span><br><span class="line">    &quot;status&quot;: 405,</span><br><span class="line">    &quot;error&quot;: &quot;Method Not Allowed&quot;,</span><br><span class="line">    &quot;path&quot;: &quot;/depts&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;timestamp&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2024-09-15T12:23:58.246+00:00&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;status&quot;</span><span class="punctuation">:</span> <span class="number">405</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;error&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Method Not Allowed&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;path&quot;</span><span class="punctuation">:</span> <span class="string">&quot;/depts&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 
 
 
@@ -241,7 +247,580 @@
 
 <p>​	然后再一路回调到controller层，调用Result方法响应前端请求；</p>
 <h5 id="2-前后端联调"><a href="#2-前后端联调" class="headerlink" title="2.前后端联调"></a>2.前后端联调</h5><p>​	结合开发的前端环境来调试后端程序</p>
-<h5 id="3-删除部门"><a href="#3-删除部门" class="headerlink" title="3.删除部门"></a>3.删除部门</h5><h5 id="4-新增部门"><a href="#4-新增部门" class="headerlink" title="4.新增部门"></a>4.新增部门</h5>
+<img src="D:\Java\tool\myBlog\blog\public\images\image-20240916224741477.png" alt="image-20240916224741477" style="zoom: 67%;" />
+
+<p>​	可以看到刷新后，数据成功渲染至前端页面</p>
+<p>​	小结：明确需求，结合接口文档，进行思路分析，在进行接口开发；</p>
+<p>而后可以使用Postman简单测试程序是否有误，确认无误后可以前后端联结调试；</p>
+<p>​		：了解@Slf4j注释，可以创建一个logger对象；记录日志</p>
+<h5 id="3-删除部门"><a href="#3-删除部门" class="headerlink" title="3.删除部门"></a>3.删除部门</h5><h6 id="明确需求"><a href="#明确需求" class="headerlink" title="明确需求"></a>明确需求</h6><p>​	在页面中点击删除，弹出确认删除提示框，点击确认并删除对应数据；</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">请求路径：/depts/&#123;id&#125;</span><br><span class="line"></span><br><span class="line">请求方式：DELETE</span><br><span class="line"></span><br><span class="line">接口描述：该接口用于根据ID删除部门数据</span><br></pre></td></tr></table></figure>
+
+<p>​	响应数据</p>
+<p>​	参数格式：application&#x2F;json</p>
+<p>​	参数说明：</p>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>类型</th>
+<th>是否必须</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>code</td>
+<td>number</td>
+<td>必须</td>
+<td>响应码，1 代表成功，0 代表失败</td>
+</tr>
+<tr>
+<td>msg</td>
+<td>string</td>
+<td>非必须</td>
+<td>提示信息</td>
+</tr>
+<tr>
+<td>data</td>
+<td>object</td>
+<td>非必须</td>
+<td>返回的数据</td>
+</tr>
+</tbody></table>
+<p>​	响应数据样例：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;code&quot;</span><span class="punctuation">:</span><span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;msg&quot;</span><span class="punctuation">:</span><span class="string">&quot;success&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;data&quot;</span><span class="punctuation">:</span><span class="literal"><span class="keyword">null</span></span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>​	思路分析：</p>
+<img src="D:\Java\tool\myBlog\blog\public\images\image-20240916225921905.png" alt="image-20240916225921905" style="zoom:67%;" />
+
+<p>​	具体实现：先在controller层接收前端的delete请求，调用service层delete方法；然后再service接口实现类中，调用mapper层delete方法实现service层delete方法，然后再去mapper层编写相关删除代码；</p>
+<p>​	controller层：注意上方有无@Autowired注解，自动填装service相关对象</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@DeleteMapping(&quot;/depts/&#123;id&#125;&quot;)</span></span><br><span class="line"><span class="keyword">public</span> Result <span class="title function_">delete</span><span class="params">(<span class="meta">@PathVariable</span> Integer id)</span>&#123;</span><br><span class="line">    <span class="comment">//记录日志</span></span><br><span class="line">    log.info(<span class="string">&quot;根据id删除部门：&#123;&#125;&quot;</span>,id);</span><br><span class="line">    deptService.delete(id);</span><br><span class="line">    <span class="keyword">return</span> Result.success();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​	service层：接口实现类，实现相关接口，调用mapper层相关方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">delete</span><span class="params">(Integer id)</span> &#123;</span><br><span class="line">    deptMapper.delete(id);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​	mapper层：实际操作数据库，@Mapper注解填充IOC容器；</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Delete(&quot;delete from dept where id = #&#123;id&#125;&quot;)</span></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">delete</span><span class="params">(Integer id)</span>;</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="4-新增部门"><a href="#4-新增部门" class="headerlink" title="4.新增部门"></a>4.新增部门</h5><h6 id="明确需求-1"><a href="#明确需求-1" class="headerlink" title="明确需求"></a>明确需求</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">请求路径：/depts</span><br><span class="line"></span><br><span class="line">请求方式：POST</span><br><span class="line"></span><br><span class="line">接口描述：该接口用于添加部门数据</span><br></pre></td></tr></table></figure>
+
+<p>​	格式：application&#x2F;json</p>
+<p>​	参数说明：</p>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>类型</th>
+<th>是否必须</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>name</td>
+<td>string</td>
+<td>必须</td>
+<td>部门名称</td>
+</tr>
+</tbody></table>
+<p>​	请求参数样例：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">	<span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;教研部&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>​	思路</p>
+<img src="D:\Java\tool\myBlog\blog\public\images\image-20240916232956722.png" alt="image-20240916232956722" style="zoom:67%;" />
+
+
+
+<h6 id="响应数据"><a href="#响应数据" class="headerlink" title="响应数据"></a>响应数据</h6><p>​	参数格式：application&#x2F;json</p>
+<p>​	参数说明：</p>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>类型</th>
+<th>是否必须</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>code</td>
+<td>number</td>
+<td>必须</td>
+<td>响应码，1 代表成功，0 代表失败</td>
+</tr>
+<tr>
+<td>msg</td>
+<td>string</td>
+<td>非必须</td>
+<td>提示信息</td>
+</tr>
+<tr>
+<td>data</td>
+<td>object</td>
+<td>非必须</td>
+<td>返回的数据</td>
+</tr>
+</tbody></table>
+<p>​	响应数据样例：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;code&quot;</span><span class="punctuation">:</span><span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;msg&quot;</span><span class="punctuation">:</span><span class="string">&quot;success&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;data&quot;</span><span class="punctuation">:</span><span class="literal"><span class="keyword">null</span></span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h6 id="具体实现"><a href="#具体实现" class="headerlink" title="具体实现"></a>具体实现</h6><p>​	再controller层中接收post请求数据；，调用service层相关方法，在其实现类中设置一些必要属性后调用mapper层相关方法，再在mapper层实现insert操作</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//contrlloer</span></span><br><span class="line"><span class="meta">@PostMapping(&quot;/depts&quot;)</span></span><br><span class="line"><span class="keyword">public</span> Result <span class="title function_">add</span><span class="params">(<span class="meta">@RequestBody</span> Dept dept)</span>&#123;</span><br><span class="line">    log.info(<span class="string">&quot;新增部门：&#123;&#125;&quot;</span>,dept);</span><br><span class="line">    deptService.add(dept);</span><br><span class="line">    <span class="keyword">return</span> Result.success();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//service实现类</span></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">add</span><span class="params">(Dept dept)</span> &#123;</span><br><span class="line">        dept.setCreateTime(LocalDateTime.now());</span><br><span class="line">        dept.setUpdateTime(LocalDateTime.now());</span><br><span class="line">        deptMapper.insert(dept);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line"><span class="comment">//mapper与数据库交互</span></span><br><span class="line"><span class="meta">@Insert(&quot;insert into dept(name,create_time,update_time) values(#&#123;name&#125;,#&#123;createTime&#125;,#&#123;updateTime&#125;)&quot;)</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">insert</span><span class="params">(Dept dept)</span>;</span><br></pre></td></tr></table></figure>
+
+<h5 id="5-修改部门"><a href="#5-修改部门" class="headerlink" title="5.修改部门"></a>5.修改部门</h5><p>​	分析：根据id查询相关部门信息，更改该部门名称，传入id和name，记得要修改数据更新时间；</p>
+<h5 id="6-一些小结"><a href="#6-一些小结" class="headerlink" title="6.一些小结"></a>6.一些小结</h5><p>​	做完后发现他们都有相同的&#x2F;depts请求路径，可以使用@RequestMapping注解来声明该类的请求路径，这样这个类里面方法的请求路径就是类的请求路径+方法的请求路径；</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Slf4j</span></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/depts&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DeptController</span> &#123;</span><br><span class="line">    <span class="meta">@Autowired</span><span class="comment">//自动注入</span></span><br><span class="line">    <span class="keyword">private</span> DeptService deptService;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@GetMapping</span> <span class="comment">//指定请求类型的注解</span></span><br><span class="line">    <span class="keyword">public</span> Result <span class="title function_">list</span><span class="params">()</span> &#123;</span><br><span class="line">        log.info(<span class="string">&quot;查询全部部门数据&quot;</span>);</span><br><span class="line">        <span class="comment">//调用service 查询 部门数据</span></span><br><span class="line">        List&lt;Dept&gt; deptList = deptService.list();</span><br><span class="line">        <span class="keyword">return</span> Result.success(deptList);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@DeleteMapping(&quot;/&#123;id&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> Result <span class="title function_">delete</span><span class="params">(<span class="meta">@PathVariable</span> Integer id)</span>&#123;</span><br><span class="line">        <span class="comment">//记录日志</span></span><br><span class="line">        log.info(<span class="string">&quot;根据id删除部门：&#123;&#125;&quot;</span>,id);</span><br><span class="line">        deptService.delete(id);</span><br><span class="line">        <span class="keyword">return</span> Result.success();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//新增部门</span></span><br><span class="line">    <span class="meta">@PostMapping</span></span><br><span class="line">    <span class="keyword">public</span> Result <span class="title function_">add</span><span class="params">(<span class="meta">@RequestBody</span> Dept dept)</span>&#123;</span><br><span class="line">        log.info(<span class="string">&quot;新增部门：&#123;&#125;&quot;</span>,dept);</span><br><span class="line">        deptService.add(dept);</span><br><span class="line">        <span class="keyword">return</span> Result.success();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="2-查询员工管理"><a href="#2-查询员工管理" class="headerlink" title="2.查询员工管理"></a>2.查询员工管理</h4><p>了解需求文档具体问题</p>
+<h5 id="1-员工列表查询-了解分页查询"><a href="#1-员工列表查询-了解分页查询" class="headerlink" title="1.员工列表查询-了解分页查询"></a>1.员工列表查询-了解分页查询</h5><p>​	相关MySQL语句</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from table order by id limit m, n;</span><br></pre></td></tr></table></figure>
+
+<p>​	此处m为查询后起始位置，n为每页记录数量；</p>
+<p>​	仅需回应查询后地表格和总记录数量</p>
+<img src="D:\Java\tool\myBlog\blog\public\images\image-20240918151337626.png" alt="image-20240918151337626" style="zoom:67%;" />
+
+<p>​	参数格式：queryString</p>
+<p>​	参数说明：</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>是否必须</th>
+<th align="left">示例</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>name</td>
+<td>否</td>
+<td align="left">张</td>
+<td>姓名</td>
+</tr>
+<tr>
+<td>gender</td>
+<td>否</td>
+<td align="left">1</td>
+<td>性别 , 1 男 , 2 女</td>
+</tr>
+<tr>
+<td>begin</td>
+<td>否</td>
+<td align="left">2010-01-01</td>
+<td>范围匹配的开始时间(入职日期)</td>
+</tr>
+<tr>
+<td>end</td>
+<td>否</td>
+<td align="left">2020-01-01</td>
+<td>范围匹配的结束时间(入职日期)</td>
+</tr>
+<tr>
+<td>page</td>
+<td>是</td>
+<td align="left">1</td>
+<td>分页查询的页码，如果未指定，默认为1</td>
+</tr>
+<tr>
+<td>pageSize</td>
+<td>是</td>
+<td align="left">10</td>
+<td>分页查询的每页记录数，如果未指定，默认为10</td>
+</tr>
+</tbody></table>
+<p>​	请求数据样例：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/emps?name=张&amp;gender=1&amp;begin=2007-09-01&amp;end=2022-09-01&amp;page=1&amp;pageSize=10</span><br></pre></td></tr></table></figure>
+
+<p>​	响应数据：</p>
+<p>​	参数格式：application&#x2F;json</p>
+<p>​	参数说明：</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>类型</th>
+<th>是否必须</th>
+<th>默认值</th>
+<th>备注</th>
+<th>其他信息</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>code</td>
+<td>number</td>
+<td>必须</td>
+<td></td>
+<td>响应码, 1 成功 , 0 失败</td>
+<td></td>
+</tr>
+<tr>
+<td>msg</td>
+<td>string</td>
+<td>非必须</td>
+<td></td>
+<td>提示信息</td>
+<td></td>
+</tr>
+<tr>
+<td>data</td>
+<td>object</td>
+<td>必须</td>
+<td></td>
+<td>返回的数据</td>
+<td></td>
+</tr>
+<tr>
+<td>|- total</td>
+<td>number</td>
+<td>必须</td>
+<td></td>
+<td>总记录数</td>
+<td></td>
+</tr>
+<tr>
+<td>|- rows</td>
+<td>object []</td>
+<td>必须</td>
+<td></td>
+<td>数据列表</td>
+<td>item 类型: object</td>
+</tr>
+<tr>
+<td>|- id</td>
+<td>number</td>
+<td>非必须</td>
+<td></td>
+<td>id</td>
+<td></td>
+</tr>
+<tr>
+<td>|- username</td>
+<td>string</td>
+<td>非必须</td>
+<td></td>
+<td>用户名</td>
+<td></td>
+</tr>
+<tr>
+<td>|- name</td>
+<td>string</td>
+<td>非必须</td>
+<td></td>
+<td>姓名</td>
+<td></td>
+</tr>
+<tr>
+<td>|- password</td>
+<td>string</td>
+<td>非必须</td>
+<td></td>
+<td>密码</td>
+<td></td>
+</tr>
+<tr>
+<td>|- entrydate</td>
+<td>string</td>
+<td>非必须</td>
+<td></td>
+<td>入职日期</td>
+<td></td>
+</tr>
+<tr>
+<td>|- gender</td>
+<td>number</td>
+<td>非必须</td>
+<td></td>
+<td>性别 , 1 男 ; 2 女</td>
+<td></td>
+</tr>
+<tr>
+<td>|- image</td>
+<td>string</td>
+<td>非必须</td>
+<td></td>
+<td>图像</td>
+<td></td>
+</tr>
+<tr>
+<td>|- job</td>
+<td>number</td>
+<td>非必须</td>
+<td></td>
+<td>职位, 说明: 1 班主任,2 讲师, 3 学工主管, 4 教研主管, 5 咨询师</td>
+<td></td>
+</tr>
+<tr>
+<td>|- deptId</td>
+<td>number</td>
+<td>非必须</td>
+<td></td>
+<td>部门id</td>
+<td></td>
+</tr>
+<tr>
+<td>|- createTime</td>
+<td>string</td>
+<td>非必须</td>
+<td></td>
+<td>创建时间</td>
+<td></td>
+</tr>
+<tr>
+<td>|- updateTime</td>
+<td>string</td>
+<td>非必须</td>
+<td></td>
+<td>更新时间</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>​	响应数据样例：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;code&quot;</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;msg&quot;</span><span class="punctuation">:</span> <span class="string">&quot;success&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;data&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;total&quot;</span><span class="punctuation">:</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;rows&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">       <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;username&quot;</span><span class="punctuation">:</span> <span class="string">&quot;jinyong&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;password&quot;</span><span class="punctuation">:</span> <span class="string">&quot;123456&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;金庸&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;gender&quot;</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;image&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://web-framework.oss-cn-hangzhou.aliyuncs.com/2022-09-02-00-27-53B.jpg&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;job&quot;</span><span class="punctuation">:</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;entrydate&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2015-01-01&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;deptId&quot;</span><span class="punctuation">:</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;createTime&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2022-09-01T23:06:30&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;updateTime&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2022-09-02T00:29:04&quot;</span></span><br><span class="line">      <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;username&quot;</span><span class="punctuation">:</span> <span class="string">&quot;zhangwuji&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;password&quot;</span><span class="punctuation">:</span> <span class="string">&quot;123456&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;张无忌&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;gender&quot;</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;image&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://web-framework.oss-cn-hangzhou.aliyuncs.com/2022-09-02-00-27-53B.jpg&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;job&quot;</span><span class="punctuation">:</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;entrydate&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2015-01-01&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;deptId&quot;</span><span class="punctuation">:</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;createTime&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2022-09-01T23:06:30&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;updateTime&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2022-09-02T00:29:04&quot;</span></span><br><span class="line">      <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="2具体思路"><a href="#2具体思路" class="headerlink" title="2具体思路"></a>2具体思路</h5><img src="D:\Java\tool\myBlog\blog\public\images\image-20240918153059692.png" alt="image-20240918153059692" style="zoom:67%;" />
+
+<p>​	先在mapper层设计count方法和page方法，与数据库交互获得总记录个数和记录数据</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="keyword">private</span> EmpService empService;</span><br><span class="line"><span class="meta">@GetMapping(&quot;/emps&quot;)</span></span><br><span class="line"><span class="keyword">public</span> Result <span class="title function_">page</span><span class="params">(<span class="meta">@RequestParam(defaultValue = &quot;1&quot;)</span> Integer page,</span></span><br><span class="line"><span class="params">                   <span class="meta">@RequestParam(defaultValue = &quot;10&quot;)</span> Integer pageSize)</span>&#123;</span><br><span class="line">    <span class="comment">//实现设置默认值,if判断比较麻烦，可以使用注解</span></span><br><span class="line">    log.info(<span class="string">&quot;分页查询员工表，参数：&#123;&#125;，&#123;&#125;&quot;</span>,page,pageSize);</span><br><span class="line">    <span class="comment">//调用service方法</span></span><br><span class="line">    <span class="type">PageBean</span> <span class="variable">pageBean</span> <span class="operator">=</span> empService.page(page-<span class="number">1</span>,pageSize);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> Result.success(pageBean);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​	然后在controller层调用service层page方法，在其实现类中重写该方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="keyword">private</span> EmpMapper empMapper;</span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> PageBean <span class="title function_">page</span><span class="params">(Integer page, Integer pageSize)</span> &#123;</span><br><span class="line">    <span class="comment">//1 获取总记录数量</span></span><br><span class="line">    <span class="type">Long</span> <span class="variable">count</span> <span class="operator">=</span> empMapper.count();</span><br><span class="line">    <span class="comment">//2 获取分页查询列表</span></span><br><span class="line">    <span class="type">Integer</span> <span class="variable">start</span> <span class="operator">=</span> (page)*pageSize;</span><br><span class="line">    List&lt;Emp&gt; empList = empMapper.page(start, pageSize);</span><br><span class="line">    <span class="comment">//3 封装到 PageBean对象 </span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">PageBean</span>(count,empList);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="3小结"><a href="#3小结" class="headerlink" title="3小结"></a>3小结</h5><p>​	注意页码与实际数据库操作对应关系</p>
+<p>​	指定默认值注解@RequestParam(default&#x3D;value)</p>
+<h5 id="4有关分页插件Page-Helper"><a href="#4有关分页插件Page-Helper" class="headerlink" title="4有关分页插件Page Helper"></a>4有关分页插件Page Helper</h5><p>​	相关代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//EmpMapper ,在MySQL语句后面自动补足limit m,n;</span></span><br><span class="line"><span class="meta">@Select(&quot;select * from emp&quot;)</span></span><br><span class="line"><span class="keyword">public</span> List&lt;Emp&gt; <span class="title function_">list</span><span class="params">()</span>;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//EmpServiceIml</span></span><br><span class="line"><span class="meta">@Overrive</span></span><br><span class="line"><span class="keyword">public</span> PageBean <span class="title function_">page</span><span class="params">(Integer page,Integer pageSize)</span>&#123;</span><br><span class="line">	<span class="comment">//1 设置分页参数</span></span><br><span class="line">	PageHelper.startPage(page,pageSize);</span><br><span class="line">	<span class="comment">//2 执行查询</span></span><br><span class="line">	List&lt;Emp&gt; empList = empMapper.list();</span><br><span class="line">	Page&lt;Emp&gt; p = (Page&lt;Emp&gt;) empList; <span class="comment">//执行了count和查询操作</span></span><br><span class="line">    <span class="comment">//3 封装 PageBean对象</span></span><br><span class="line">    <span class="type">PageBean</span> <span class="variable">pageBean</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">PageBean</span>(p.getTotal(),p.getResult());</span><br><span class="line">    <span class="keyword">return</span> pageBean;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​	依赖引入</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//pom.xml</span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.github.pagehelper<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>pagehelper-spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.4.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="5条件分页查询"><a href="#5条件分页查询" class="headerlink" title="5条件分页查询"></a>5条件分页查询</h5><p>​	<img src="D:\Java\tool\myBlog\blog\public\images\image-20240918165112186.png" alt="image-20240918165112186" /></p>
+<h5 id="6使用动态SQL"><a href="#6使用动态SQL" class="headerlink" title="6使用动态SQL"></a>6使用动态SQL</h5><p>​	使用静态SQL语句太过麻烦，代码结构变得臃肿</p>
+<p>​	使用xml映射文件动态配置SQL条件，三点规范</p>
+<p>​	1同包同名，2引入规则，配置namespace  3，SQL语句的id要与mapper语句中方法名一致</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span> ?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">mapper</span></span></span><br><span class="line"><span class="meta">        <span class="keyword">PUBLIC</span> <span class="string">&quot;-//mybatis.org//DTD Mapper 3.0//EN&quot;</span></span></span><br><span class="line"><span class="meta">        <span class="string">&quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mapper</span> <span class="attr">namespace</span>=<span class="string">&quot;com.itheima.mapper.EmpMapper&quot;</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;/<span class="name">mapper</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>​	mapper标签内，id与mapper接口方法名一致，resultType是放回值类型</p>
+<p>where标签可以解决 where语句内and关键字冗余情况</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;list&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;com.itheima.pojo.Emp&quot;</span>&gt;</span></span><br><span class="line">    select *</span><br><span class="line">    from emp</span><br><span class="line">    <span class="tag">&lt;<span class="name">where</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;name!= null&quot;</span>&gt;</span></span><br><span class="line">        name like concat(&#x27;%&#x27;,#&#123;name&#125;,&#x27;%&#x27;)</span><br><span class="line">    <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;gender!= null&quot;</span>&gt;</span></span><br><span class="line">        and gender = #&#123;gender&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;begin!= null and end != null&quot;</span>&gt;</span></span><br><span class="line">        and entrydate between #&#123;begin&#125; and #&#123;end&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    order by update_time desc</span><br><span class="line">    <span class="tag">&lt;/<span class="name">where</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="3删除员工管理"><a href="#3删除员工管理" class="headerlink" title="3删除员工管理"></a>3删除员工管理</h4><h5 id="1考虑单个删除和批量删除，发现单个删除是批量删除的一种情况，仅开发批量删除接口"><a href="#1考虑单个删除和批量删除，发现单个删除是批量删除的一种情况，仅开发批量删除接口" class="headerlink" title="1考虑单个删除和批量删除，发现单个删除是批量删除的一种情况，仅开发批量删除接口"></a>1考虑单个删除和批量删除，发现单个删除是批量删除的一种情况，仅开发批量删除接口</h5><h5 id="2思路"><a href="#2思路" class="headerlink" title="2思路"></a>2思路</h5><p>​	browser										-》</p>
+<p>​	EmpController：1接收路径参数与id数组2响应service进行批量删除3响应</p>
+<p>​		使用@DeleteMapping、@PAthVarible注解    -》</p>
+<p>​	EmpService：调用mapper接口进行批量删除操作   -》</p>
+<p>​	EmpMapper：delete from emp where id in (?,?,?);</p>
+<p>​		动态SQL实现，使用<foreach>标签              	   -》</p>
+<p>​	数据库</p>
+<h5 id="3实现"><a href="#3实现" class="headerlink" title="3实现"></a>3实现</h5><p>​	有关foreach标签，5个重要属性，collection：集合，item：自定义个体名，separator:个体间隔符，open：开始符，close：结束符</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">foreach</span> <span class="attr">collection</span>=<span class="string">&quot;ids&quot;</span> <span class="attr">item</span>=<span class="string">&quot;id&quot;</span> <span class="attr">separator</span>=<span class="string">&quot;,&quot;</span> <span class="attr">open</span>=<span class="string">&quot;(&quot;</span> <span class="attr">close</span>=<span class="string">&quot;)&quot;</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;/<span class="name">foreach</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>​	代码实现</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--    批量删除 根据id--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">delete</span> <span class="attr">id</span>=<span class="string">&quot;detele&quot;</span>&gt;</span></span><br><span class="line">    delete</span><br><span class="line">    from emp</span><br><span class="line">    where id in</span><br><span class="line">    <span class="tag">&lt;<span class="name">foreach</span> <span class="attr">collection</span>=<span class="string">&quot;ids&quot;</span> <span class="attr">item</span>=<span class="string">&quot;id&quot;</span> <span class="attr">separator</span>=<span class="string">&quot;,&quot;</span> <span class="attr">open</span>=<span class="string">&quot;(&quot;</span> <span class="attr">close</span>=<span class="string">&quot;)&quot;</span>&gt;</span></span><br><span class="line">        #&#123;id&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">foreach</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">delete</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="4新增员工管理"><a href="#4新增员工管理" class="headerlink" title="4新增员工管理"></a>4新增员工管理</h4><h5 id="1明确需求："><a href="#1明确需求：" class="headerlink" title="1明确需求："></a>1明确需求：</h5><p>​	请求路径：&#x2F;emps</p>
+<p>​	请求方式：PUT</p>
+<p>​	接口描述：该接口用于修改员工的数据信息</p>
+<p>​	参数格式：application&#x2F;<em>json</em></p>
+<p>​	参数说明：</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>类型</th>
+<th>是否必须</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>id</td>
+<td>number</td>
+<td>必须</td>
+<td>id</td>
+</tr>
+<tr>
+<td>username</td>
+<td>string</td>
+<td>必须</td>
+<td>用户名</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>必须</td>
+<td>姓名</td>
+</tr>
+<tr>
+<td>gender</td>
+<td>number</td>
+<td>必须</td>
+<td>性别, 说明: 1 男, 2 女</td>
+</tr>
+<tr>
+<td>image</td>
+<td>string</td>
+<td>非必须</td>
+<td>图像</td>
+</tr>
+<tr>
+<td>deptId</td>
+<td>number</td>
+<td>非必须</td>
+<td>部门id</td>
+</tr>
+<tr>
+<td>entrydate</td>
+<td>string</td>
+<td>非必须</td>
+<td>入职日期</td>
+</tr>
+<tr>
+<td>job</td>
+<td>number</td>
+<td>非必须</td>
+<td>职位, 说明: 1 班主任,2 讲师, 3 学工主管, 4 教研主管, 5 咨询师</td>
+</tr>
+</tbody></table>
+<p>​	请求数据样例：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;image&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://web-framework.oss-cn-hangzhou.aliyuncs.com/2022-09-03-07-37-38222.jpg&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;username&quot;</span><span class="punctuation">:</span> <span class="string">&quot;linpingzhi&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;林平之&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;gender&quot;</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;job&quot;</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;entrydate&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2022-09-18&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;deptId&quot;</span><span class="punctuation">:</span> <span class="number">1</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>​	响应数据 josn ，Result对象格式</p>
+<h5 id="2具体思路-1"><a href="#2具体思路-1" class="headerlink" title="2具体思路"></a>2具体思路</h5><p>​	browser：-&gt;</p>
+<p>​	EmpMapper：1接收并封装请求参数，2调用service方法保存数据，3响应</p>
+<p>​		使用@PostMapping注解响应，@RequestBody封装josn请求	  -&gt;</p>
+<p>​	EmpService：1补充实体基础属性，2调用mapper接口进行保存数据操作-&gt;</p>
+<p>​	EmpMapper：1insert into emp( …)  values(?,?,?);                            -&gt;数据库</p>
+<h5 id="3实现-1"><a href="#3实现-1" class="headerlink" title="3实现"></a>3实现</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//EmpController</span></span><br><span class="line"><span class="comment">//新增员工</span></span><br><span class="line"><span class="meta">@PostMapping</span></span><br><span class="line"><span class="keyword">public</span> Result <span class="title function_">save</span><span class="params">(<span class="meta">@RequestBody</span> Emp emp)</span>&#123;</span><br><span class="line"></span><br><span class="line">    log.info(<span class="string">&quot;新增员工emp：&#123;&#125;&quot;</span>,emp);</span><br><span class="line"></span><br><span class="line">    empService.save(emp);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> Result.success();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//EmpServiceIml</span></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">(Emp emp)</span> &#123;</span><br><span class="line">    emp.setCreateTime(LocalDateTime.now());</span><br><span class="line">    emp.setUpdateTime(LocalDateTime.now());</span><br><span class="line">    empMapper.insert(emp);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//EmpMapper</span></span><br><span class="line"><span class="comment">//插入单条数据 比较简单，静态录入</span></span><br><span class="line"><span class="meta">@Insert(&quot;insert into emp(username, name, gender, image, job, entrydate, dept_id, create_time, update_time) &quot; +</span></span><br><span class="line"><span class="meta">        &quot;values(#&#123;username&#125;,#&#123;name&#125;,#&#123;gender&#125;,#&#123;image&#125;,#&#123;job&#125;,#&#123;entrydate&#125;,#&#123;deptId&#125;,#&#123;createTime&#125;,#&#123;updateTime&#125;)&quot;)</span></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">insert</span><span class="params">(Emp emp)</span>;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4修改员工"><a href="#4修改员工" class="headerlink" title="4修改员工"></a>4修改员工</h4><h5 id="1需求"><a href="#1需求" class="headerlink" title="1需求"></a>1需求</h5><p>​	请求路径：&#x2F;emps</p>
+<p>​	请求方式：PUT</p>
+<p>​	接口描述：该接口用于修改员工的数据信息</p>
+<p>​	参数格式：application&#x2F;json</p>
+<p>​	参数说明：</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>类型</th>
+<th>是否必须</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>id</td>
+<td>number</td>
+<td>必须</td>
+<td>id</td>
+</tr>
+<tr>
+<td>username</td>
+<td>string</td>
+<td>必须</td>
+<td>用户名</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>必须</td>
+<td>姓名</td>
+</tr>
+<tr>
+<td>gender</td>
+<td>number</td>
+<td>必须</td>
+<td>性别, 说明: 1 男, 2 女</td>
+</tr>
+<tr>
+<td>image</td>
+<td>string</td>
+<td>非必须</td>
+<td>图像</td>
+</tr>
+<tr>
+<td>deptId</td>
+<td>number</td>
+<td>非必须</td>
+<td>部门id</td>
+</tr>
+<tr>
+<td>entrydate</td>
+<td>string</td>
+<td>非必须</td>
+<td>入职日期</td>
+</tr>
+<tr>
+<td>job</td>
+<td>number</td>
+<td>非必须</td>
+<td>职位, 说明: 1 班主任,2 讲师, 3 学工主管, 4 教研主管, 5 咨询师</td>
+</tr>
+</tbody></table>
+<p>​	请求数据样例：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;image&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://web-framework.oss-cn-hangzhou.aliyuncs.com/2022-09-03-07-37-38222.jpg&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;username&quot;</span><span class="punctuation">:</span> <span class="string">&quot;linpingzhi&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;林平之&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;gender&quot;</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;job&quot;</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;entrydate&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2022-09-18&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;deptId&quot;</span><span class="punctuation">:</span> <span class="number">1</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="2思路-1"><a href="#2思路-1" class="headerlink" title="2思路"></a>2思路</h5><p>​	browser：-&gt;put请求josn请求体</p>
+<p>​	controller：接收此请求，使用@RequestBody注解映射为Emp对象，log.info()打印日志信息，调用service层update方法-&gt;</p>
+<p>​	service:在实现类中重写update方法，设置其updateTime时间为现在，调用mapper层update方法，与数据库交互，通过id更新单条记录；</p>
+<h5 id="3具体实现"><a href="#3具体实现" class="headerlink" title="3具体实现"></a>3具体实现</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Controller-EmpController</span></span><br><span class="line"><span class="meta">@PutMapping</span></span><br><span class="line"><span class="keyword">public</span> Result <span class="title function_">update</span><span class="params">(<span class="meta">@RequestBody</span> Emp emp)</span>&#123;</span><br><span class="line">    log.info(<span class="string">&quot;修改员工信息：&#123;&#125;&quot;</span>,emp);</span><br><span class="line">    empService.update(emp);</span><br><span class="line">    <span class="keyword">return</span> Result.success();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Service-EmpServiceIml</span></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">update</span><span class="params">(Emp emp)</span> &#123;</span><br><span class="line">        emp.setUpdateTime(LocalDateTime.now());</span><br><span class="line">        empMapper.update(emp);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//mapper-EmpMapper</span></span><br><span class="line"><span class="meta">@Update(&quot;update emp set username=#&#123;username&#125;,name=#&#123;name&#125;, gender=#&#123;gender&#125;,image=#&#123;image&#125;,job=#&#123;job&#125;,&quot; +</span></span><br><span class="line"><span class="meta">            &quot;entrydate=#&#123;entrydate&#125;,dept_id=#&#123;deptId&#125;,update_time=#&#123;updateTime&#125; where id=#&#123;id&#125; &quot;)</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">update</span><span class="params">(Emp emp)</span>;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="5文件上传"><a href="#5文件上传" class="headerlink" title="5文件上传"></a>5文件上传</h4><h5 id="1简介"><a href="#1简介" class="headerlink" title="1简介"></a>1简介</h5><p>​	将本地文件图片、音频和视频等文件上传到服务器，供其他用户浏览或下载的过程</p>
+<p>​	上传三要素：</p>
+<p>​		1前端要定义一个form表单，其必须含有一个type值为file的input标签，</p>
+<p>​		2此表单的提交方式必须为post(就是from的method属性值为post)，</p>
+<p>​		3指定表单的enctype属性值为multipart&#x2F;from-data(编码格式)</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;/upload&quot;</span> <span class="attr">method</span>=<span class="string">&quot;post&quot;</span> <span class="attr">enctype</span>=<span class="string">&quot;multipart/form-data&quot;</span>&gt;</span></span><br><span class="line">    姓名: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;username&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    年龄: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;age&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    头像: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;file&quot;</span> <span class="attr">name</span>=<span class="string">&quot;image&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">value</span>=<span class="string">&quot;提交&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>​	接收数据  -multipartFile file  </p>
+<p>​		若与JavaBean之中的image不一致，可以使用@RequestParam(“image”)注解单独区指定</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//UploadController</span></span><br><span class="line"><span class="meta">@Slf4j</span></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">UploadController</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@PostMapping(&quot;/upload&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> Result <span class="title function_">uplaod</span><span class="params">(String name, Integer age, MultipartFile image)</span>&#123;</span><br><span class="line">        log.info(<span class="string">&quot;上传图片image：&#123;&#125;,&#123;&#125;,&#123;&#125;&quot;</span>,name,age,image);</span><br><span class="line">        <span class="keyword">return</span> Result.success();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h5 id="2本地存储"><a href="#2本地存储" class="headerlink" title="2本地存储"></a>2本地存储</h5><p>​	在服务器接收到上传来的文件之后，存储在本地服务器磁盘内；</p>
+<p>​	考虑存储位置，及存储的文件名，</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Slf4j</span></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">UploadController</span> &#123;</span><br><span class="line">    <span class="meta">@PostMapping(&quot;/upload&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> Result <span class="title function_">uplaod</span><span class="params">(String name, Integer age, MultipartFile image)</span> <span class="keyword">throws</span> IOException &#123;</span><br><span class="line">        log.info(<span class="string">&quot;上传图片image：&#123;&#125;,&#123;&#125;,&#123;&#125;&quot;</span>,name,age,image);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//获取原始文件名</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">originalFilename</span> <span class="operator">=</span> image.getOriginalFilename();</span><br><span class="line">        <span class="comment">//构造唯一文件名-uuid(通用唯一识别码）例如：f83fb3ae-5c3c-4c0e-985d-a34ba57b9032</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">index</span> <span class="operator">=</span> originalFilename.lastIndexOf(<span class="string">&quot;.&quot;</span>);</span><br><span class="line">        <span class="type">String</span> <span class="variable">extname</span> <span class="operator">=</span> originalFilename.substring(index);</span><br><span class="line">        <span class="type">String</span> <span class="variable">newFileName</span> <span class="operator">=</span> UUID.randomUUID().toString()+extname;</span><br><span class="line">        log.info(<span class="string">&quot;新的文件名：&#123;&#125;&quot;</span>,newFileName);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//下载到本地目录E:\file\JavaStudy\code\source\image</span></span><br><span class="line">        image.transferTo(<span class="keyword">new</span> <span class="title class_">File</span>(<span class="string">&quot;E:\\file\\JavaStudy\\code\\source\\image\\&quot;</span>+newFileName));</span><br><span class="line">        <span class="keyword">return</span> Result.success();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​	此处仅可以上传小于1M大小文件，可以修改SpringBoot默认配置来增加可上传文件大小</p>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#配置单个上传文件大小限制</span></span><br><span class="line"><span class="attr">spring.servlet.multipart.max-file-size</span>=<span class="string">10MB</span></span><br><span class="line"><span class="comment">#配置单个请求最大上传大小（一次传输多个文件）</span></span><br><span class="line"><span class="attr">spring.servlet.multipart.max-request-size</span>=<span class="string">100MB</span></span><br></pre></td></tr></table></figure>
+
+<p>​	弊端：前端无法直接访问，对于大量的数据，扩容很困难；损坏可能大</p>
+<h5 id="3阿里云OSS"><a href="#3阿里云OSS" class="headerlink" title="3阿里云OSS"></a>3阿里云OSS</h5><p>​	阿里云：阿里巴巴旗下的云计算公司，国内最大的云服务提供商</p>
+<p>​	第三方服务通用思路：准备工作-&gt;参照官方SDK编写入门程序-&gt;集成使用</p>
+<p>​	阿里云OSS使用流程：注册阿里云-&gt;充值-&gt;开通对象存储服务(OSS)-&gt;创建bucket-&gt;获取密钥AccessKey-&gt;参照官方文档SDK编写-&gt;案例集成OSS</p>
+<p>​	</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--        阿里云OSS--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.aliyun.oss<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>aliyun-sdk-oss<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.17.4<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--   若jdk高于1.7.1版本，额外引入下面依赖      --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>javax.xml.bind<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jaxb-api<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.3.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>javax.activation<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>activation<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.1.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- no more than 2.3.3--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.glassfish.jaxb<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jaxb-runtime<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.3.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h4 id="5修改员工数据"><a href="#5修改员工数据" class="headerlink" title="5修改员工数据"></a>5修改员工数据</h4><p>​	根据id查询实现数据回显，get请求；修改数据在上面已完成</p>
+<h4 id="6配置文件"><a href="#6配置文件" class="headerlink" title="6配置文件"></a>6配置文件</h4><h5 id="1参数配置化"><a href="#1参数配置化" class="headerlink" title="1参数配置化"></a>1参数配置化</h5><p>​		即在properties文件内配置，适合小项目</p>
+<p>​		类似的xml配置文件太臃肿；</p>
+<h5 id="2yml文件配置化"><a href="#2yml文件配置化" class="headerlink" title="2yml文件配置化"></a>2yml文件配置化</h5><p>​		即在yml文件内配置，这种配置方法层次性更好</p>
+<h5 id="3-ConfigurationProperties"><a href="#3-ConfigurationProperties" class="headerlink" title="3@ConfigurationProperties"></a>3@ConfigurationProperties</h5><p>​		在yml文件中配置，然后再新建的xxxProperties类前使用该注解引入,自动注入；</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="meta">@Componet</span></span><br><span class="line"><span class="meta">@ConfigurationProperties(prefix=&quot;aliyun.oss&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">AliOSSProperties</span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String endpoint;</span><br><span class="line">    <span class="keyword">private</span> String accessKeyId;</span><br><span class="line">    <span class="keyword">private</span> String accessKeySecret;</span><br><span class="line">    pricate String bucketName;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//上面简写</span></span><br><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="keyword">private</span> AliOSSProperties aliOSSporperties;</span><br><span class="line"><span class="comment">//使用数据时，调用get方法获取；</span></span><br></pre></td></tr></table></figure>
+
+
+
+
     </div>
 
     
@@ -259,6 +838,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2024/09/19/%E5%90%8E%E7%AB%AF%E6%A1%88%E4%BE%8B1.1/" rel="next" title="">
+                   <i class="fa fa-angle-right"></i>
+                </a>
             </div>
           </div>
     </footer>
