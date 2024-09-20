@@ -112,7 +112,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -130,6 +130,128 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/09/19/Nowcoder0919/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="chuYang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/09/19/Nowcoder0919/" class="post-title-link" itemprop="url">Untitled</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2024-09-19 20:11:29 / Modified: 21:42:51" itemprop="dateCreated datePublished" datetime="2024-09-19T20:11:29+08:00">2024-09-19</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>title: 牛客练习<br>date: 2024-09-13 23:41:30<br>tags:test</p>
+<h3 id="练习1"><a href="#练习1" class="headerlink" title="练习1"></a>练习1</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">关于Java内存区域下列说法不正确的有哪些</span><br><span class="line">A	程序计数器是一块较小的内存空间，它的作用可以看做是当前线程所执行的字节码的信号指示器，每个线程都需要一个独立的程序计数器.</span><br><span class="line">B	Java虚拟机栈描述的是java方法执行的内存模型，每个方法被执行的时候都会创建一个栈帧，用于存储局部变量表、类信息、动态链接等信息</span><br><span class="line">C	Java堆是java虚拟机所管理的内存中最大的一块，每个线程都拥有一块内存区域，所有的对象实例以及数组都在这里分配内存。</span><br><span class="line">D	方法区是各个线程共享的内存区域，它用于存储已经被虚拟机加载的常量、即时编译器编译后的代码、静态变量等数据。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">A.程序计数器是一块较小的内存空间，它的作用可以看做是当前线程所执行的字节码的信号指示器（偏移地址），Java编译过程中产生的字节码有点类似编译原理的指令，程序计数器的内存空间存储的是当前执行的字节码的偏移地址，每一个线程都有一个独立的程序计数器（**程序计数器的内存空间是线程私有的**），因为当执行语句时，改变的是程序计数器的内存空间，因此它不会发生内存溢出 **，并且程序计数器是jvm虚拟机规范中唯一一个没有规定 \*OutOfMemoryError\* 异常 的区域；** </span><br><span class="line"></span><br><span class="line">  B.java虚拟机栈：**线程私有**，生命周期和线程一致。描述的是 Java 方法执行的内存模型：每个方法在执行时都会床创建一个栈帧(Stack Frame)用于存储局部变量表、操作数栈、动态链接、方法出口等信息。每一个方法从调用直至执行结束，就对应着一个栈帧从虚拟机栈中入栈到出栈的过程。 **没有类信息，类信息是在方法区中**</span><br><span class="line"> C.java堆：对于绝大多数应用来说，这块区域是 JVM 所管理的内存中最大的一块。**线程共享**，主要是存放对象实例和数组</span><br><span class="line"></span><br><span class="line">  D.方法区：属于**共享内存区域**，存储已被虚拟机加载的类信息、常量、静态变量、即时编译器编译后的代码等数据。 </span><br><span class="line"></span><br><span class="line">作者：古城寂寞</span><br><span class="line">链接：https://www.nowcoder.com/exam/test/<span class="number">83535192</span>/submission?examPageSource=Intelligent&amp;pid=<span class="number">58826788</span>&amp;testCallback=https%3A%2F%2Fwww.nowcoder.com%2Fexam%2Fintelligent%3FquestionJobId%3D10</span><br><span class="line">来源：牛客网</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="练习2"><a href="#练习2" class="headerlink" title="练习2"></a>练习2</h3><p>sleep不是Object类的方法</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A    synchronized     Java语言的关键字，当它用来修饰一个方法或者一个代码块的时候，能够保证在同一时刻最多只有一个线程执行该段代码。 B  C   D 都是Object类中的方法             notify():  是唤醒一个正在等待该对象的线程。           notifyAll(): 唤醒所有正在等待该对象的线程。 E   sleep 是Thread类中的方法 wait 和 sleep的区别：         wait指线程处于进入等待状态，形象地说明为“等待使用CPU”，此时线程不占用任何资源，不增加时间限制。         sleep指线程被调用时，占着CPU不工作，形象地说明为“占着CPU睡觉”，此时，系统的CPU部分资源被占用，其他线程无法进入，会增加时间限制。</span><br></pre></td></tr></table></figure>
+
+<h3 id="练习3"><a href="#练习3" class="headerlink" title="练习3"></a>练习3</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">A.类的成员变量包括实例变量和类变量（静态变量）,成员方法包括实例方法和类方法（静态方法）。 A 实例变量是类的成员变量-正确  </span><br><span class="line"></span><br><span class="line"> B.类变量（静态变量）用关键字static声明，B实例变量用关键字static声明-错误  </span><br><span class="line"></span><br><span class="line"> C.方法中的局部变量在方法被调用加载时开始入栈时创建，方法入栈创建栈帧包括局部变量表操作数栈，局部变量表存放局部变量，并非在执行该方法时被创建，</span><br><span class="line"> C-在方法中定义的局部变量在该方法被执行时创建-错误  </span><br><span class="line"></span><br><span class="line"> D.局部变量被使用前必须初始化，否则程序报错。D正确 </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="练习4"><a href="#练习4" class="headerlink" title="练习4"></a>练习4</h3><p>​	开放地址法、二次哈希法、链地址法、建立公共溢出区都是可以解决hash冲突，但在java.util.HashMap中使用的是<strong>链地址法</strong>。</p>
+<h3 id="练习5"><a href="#练习5" class="headerlink" title="练习5"></a>练习5</h3><p> doGet&#x2F;doPost 则是在 javax.servlet.http.HttpServlet 中实现的</p>
+<p>service()是在javax.servlet.Servlet接口中定义的</p>
+<p>service判断请求类型，决定是调用doGet还是doPost方法</p>
+<h3 id="练习6"><a href="#练习6" class="headerlink" title="练习6"></a>练习6</h3><p>1.try和catch语句<br>    ●将要处理的代码放入try块中，然后创建相应的catch块的列表。如果生成都异常与catch中提到的相匹配，那么catch条件中的块语句就被执行。try块后可能有许多catch块，每个都处理不同的异常。每个catch中的参数都是Exception的子类。<br>2.finally语句<br>    ●finally语句定义一个总是执行的代码，而不考虑异常是否被捕获。<br>3.throw引起一个异常</p>
+<pre><code>  ‍●‍‍调用申明抛出异常
+
+  ●‍throw语句强制抛出异常
+</code></pre>
+<p>特别情况：</p>
+<ol>
+<li>在try中调用System.exit(0)，强制退出了程序，finally块不执行。</li>
+<li>在进入try块前，出现了异常，finally块不执行。</li>
+</ol>
+<h3 id="练习7"><a href="#练习7" class="headerlink" title="练习7"></a>练习7</h3><p>java object默认的基本方法中没有copy()，含有如下方法：<br> getClass(), hashCode(),  equals(), clone(), toString(), notify(), notifyAll(), wait(), finalize()</p>
+<h3 id="练习8"><a href="#练习8" class="headerlink" title="练习8"></a>练习8</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">HelloSogou</span>&#123;</span><br><span class="line">   <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] a)</span>&#123;</span><br><span class="line">     Thread t= <span class="keyword">new</span> <span class="title class_">Thread</span>()&#123;</span><br><span class="line">       <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span>&#123;Sogou();&#125;</span><br><span class="line">   &#125;;</span><br><span class="line">   t.run();</span><br><span class="line">   System.out.print(<span class="string">&quot;Hello&quot;</span>);</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">static</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title function_">Sogou</span><span class="params">()</span>&#123;</span><br><span class="line">   System.out.print(<span class="string">&quot;Sogou&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>以上JAVA程序的输出是什么</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">我觉得误区有两个：一个是run和start区别，Thread.run()是调用方法，Thread.</span><br><span class="line">  start()是启动线程；另一个是锁持有问题。这个题是调用方法，和多线程就无关。本题只有一个线程，持有HelloSogou.class锁。那么，就是另一个问题：同步方法调用另一个同步方法的锁问题？</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  public synchronized void</span><br><span class="line">  methodA(int a, int b)&#123;&#125;</span><br><span class="line"> public synchronized void methodB(int</span><br><span class="line">  a）&#123;</span><br><span class="line">      methodA(a, 0); </span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  首先要明白两个问题，1.锁的对象是谁？2.谁持有了锁？</span><br><span class="line"></span><br><span class="line">  假设方法A和B是在同一个类Test中的两个方法。</span><br><span class="line"> Test</span><br><span class="line">  t=new Test(); </span><br><span class="line"> t.methodB(); </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  调用methodB()方法，获得锁，锁是对象t；锁谁持有？当前线程（不可以说是methodB持有该锁），methodB又调用methodA，也需要锁t，该线程已持有t，当然可以直接调用methodA。 </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  类比到此题，只有一个主线程，调用main，持有HelloSogou.class锁，那当然可以直接调用Sogou方法。 </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  第二，如果是t.statrt()，那么这个题，静态同步函数的锁是该类的字节码文件.class。此题中，main函数和Sogou方法都是static的，所以持有相同锁</span><br><span class="line">  </span><br><span class="line">    HelloSogou.class</span><br><span class="line">  </span><br><span class="line">  ，那么，在main线程（main</span><br><span class="line">  是一个线程也是一个进程</span><br><span class="line">  ）中又开了一个线程，调用Sogou方法，锁会冲突。</span><br><span class="line"></span><br><span class="line">  我的分析是：调用main函数（一个线程），main函数开启另一个线程，并启动，但是main函数和Sogou方法是同一个锁，所以main函数执行完毕后才会释放锁，Sogou方法才会执行，这就是为什么，换成start，是HelloSogou。 </span><br><span class="line">  第三，将Sogou方法的锁改为其他.class锁，那么，HelloSogou和SogouHello都可能出现。因为没有互斥现象了，变为抢占式的了。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="练习9"><a href="#练习9" class="headerlink" title="练习9"></a>练习9</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">foo</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String sgf[])</span> &#123;</span><br><span class="line"> </span><br><span class="line">        StringBuffer a=<span class="keyword">new</span> <span class="title class_">StringBuffer</span>(<span class="string">&quot;A&quot;</span>);</span><br><span class="line"> </span><br><span class="line">        StringBuffer b=<span class="keyword">new</span> <span class="title class_">StringBuffer</span>(<span class="string">&quot;B&quot;</span>);</span><br><span class="line"> </span><br><span class="line">        operate(a,b);</span><br><span class="line"> </span><br><span class="line">        System.out.println(a+<span class="string">&quot;.&quot;</span>+b);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">operate</span><span class="params">(StringBuffer x,StringBuffer y)</span> &#123;</span><br><span class="line">        x.append(y);</span><br><span class="line">        y=x;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>​	类与类之间的关系为继承，只能单继承，但可以多层继承。 2.类与接口之间的关系为实现，既可以单实现，也可以多实现。 3.接口与接口之间的关系为继承，既可以单继承，也可以多继承。</p>
+<p>​	一旦一个共享变量（类的成员变量、类的静态成员变量）被volatile修饰之后，那么就具备了两层语义： 1）保证了不同线程对这个变量进行操作时的可见性，即一个线程修改了某个变量的值，这新值对其他线程来说是立即可见的。 2）禁止进行指令重排序。 volatile只提供了保证访问该变量时，每次都是从内存中读取最新值，并不会使用寄存器缓存该值——每次都会从内存中读取。 而对该变量的修改，volatile并不提供原子性的保证。 由于及时更新，很可能导致另一线程访问最新变量值，无法跳出循环的情况 多线程下计数器必须使用锁保护</p>
+<p>​	原子性就是不可分割，比如赋值操作 i &#x3D; 0；这就是一个原子性的代码，但是i++;这种就是i&#x3D; i+1;是两个操作，先加一后赋值，所以不是原子性,volatile关键字只保证了线程可见性，但是线程操作上没有规定必须原子性。</p>
+<p>​	一个源程序只能有一个public类存在，且类名与文件名相同   </p>
+<p>​	<strong>Java一个源程序只能有一个public类存在，且类名与文件名相同。</strong>Java程序是从main方法开始执行的，public为类加载器提供入口，然后找到public类中的main方法开始执行。如果存在多个public类，程序将不知道该从哪里执行。</p>
+<p>​	Constructors, static initializers, and instance initializers are not members and</p>
+<p>therefore are not inherited.(构造器、静态初始化块、实例初始化块不继承）</p>
+<p>​	分母为0 为运行时异常，jvm帮我们捕获，无需代码里面显式捕获    </p>
+<p>​	方法重写要求方法名，返回值类型，参数完全相同，所以A符合，B返回值类型不同，编译错误。而C和D不仅返回值类型不同，参数也不同，不属于方法重写，而是属于子类自己新增的方法。</p>
+<p>​	在Java语言规范中，不允许package&nbsp;name以&ldquo;java&rdquo;开头，不然会报一个java.lang.SecurityException&nbsp;的错误。因为假如我们允许包名以java开头，那么我们完全可以编写和jdk标准包下一模一样的类，如Java.lang.Integer。因此在虚拟机进行类或接口解析时可能会发生冲突。一句话总结就是:假如允许包名以java开头，可能会导致命名空间污染的问题。实际上Java对此也做了限制，具体的源码解析可以参考这篇博客–[<a target="_blank" rel="noopener" href="http://www.jianshu.com/p/f9a56a3edadd">http://www.jianshu.com/p/f9a56a3edadd</a></p>
+<p>​	赋值语句的值等于＝右边的值 </p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -167,9 +289,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2024-09-19 16:04:52 / Modified: 16:06:00" itemprop="dateCreated datePublished" datetime="2024-09-19T16:04:52+08:00">2024-09-19</time>
+      <time title="Created: 2024-09-19 16:04:52" itemprop="dateCreated datePublished" datetime="2024-09-19T16:04:52+08:00">2024-09-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2024-09-20 20:26:23" itemprop="dateModified" datetime="2024-09-20T20:26:23+08:00">2024-09-20</time>
     </span>
 
   
@@ -183,7 +311,66 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>title: 后端开发-登录认证<br>date: 2024-09-19 25:41:30<br>tags:Java</p>
+<h2 id="后端开发"><a href="#后端开发" class="headerlink" title="后端开发"></a>后端开发</h2><h3 id="1登录认证"><a href="#1登录认证" class="headerlink" title="1登录认证"></a>1登录认证</h3><h4 id="1登录功能"><a href="#1登录功能" class="headerlink" title="1登录功能"></a>1登录功能</h4><p>​	根据用户密码来查询数据库，是否匹配</p>
+<h5 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h5><p>​	browser： post请求，josn请求体  	-&gt;</p>
+<p>​	controller：接收响应并封装数据，调用service方法进行登录，</p>
+<p>​		@PostMapping @RequestBody</p>
+<p>​	service：调用mapper接口查询用户信息</p>
+<p>​	mapper：实现与数据库交互</p>
+<h5 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//controller-LoginController</span></span><br><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="keyword">private</span> EmpService empService;</span><br><span class="line"><span class="meta">@PostMapping(&quot;/login&quot;)</span></span><br><span class="line"><span class="keyword">public</span> Result <span class="title function_">login</span><span class="params">(<span class="meta">@RequestBody</span> Emp emp)</span>&#123;</span><br><span class="line">    log.info(<span class="string">&quot;用户登录,用户名:&#123;&#125;&quot;</span>,emp.getUsername());</span><br><span class="line">    <span class="type">Emp</span> <span class="variable">e</span> <span class="operator">=</span>  empService.login(emp);</span><br><span class="line">    <span class="keyword">return</span> e!=<span class="literal">null</span>?Result.success():Result.error(<span class="string">&quot;用户账户密码错误&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//service/EmpServiceIml</span></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> Emp <span class="title function_">login</span><span class="params">(Emp emp)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> empMapper.getUsernameAndPassword(emp);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//mapper/EmpMapper</span></span><br><span class="line"><span class="meta">@Select(&quot;select * from emp where username=#&#123;username&#125; and password=#&#123;password&#125;&quot;)</span></span><br><span class="line">    Emp <span class="title function_">getUsernameAndPassword</span><span class="params">(Emp emp)</span>;</span><br></pre></td></tr></table></figure>
 
+<h4 id=""><a href="#" class="headerlink" title=""></a></h4><h4 id="2登录校验"><a href="#2登录校验" class="headerlink" title="2登录校验"></a>2登录校验</h4><p>​	前端在未登录的情况下也可以直接访问其他部门管理页面、员工管理</p>
+<h5 id="1-思路"><a href="#1-思路" class="headerlink" title="1.思路"></a>1.思路</h5><p>​	统一拦截器，在用户登录成功后，每一次请求都可以获取到该标记</p>
+<p>​		实现方法：1过滤器Filter ，2拦截器Intercepror</p>
+<h5 id="2-会话技术"><a href="#2-会话技术" class="headerlink" title="2.会话技术"></a>2.会话技术</h5><p>​	会话：用户使用浏览器访问web服务器的资源，建立会话，直到一方断开连接，会话结束</p>
+<p>​	会话追踪：一种维护浏览器状态的方法，服务器需要识别多次请求是否来自同一浏览器，以便同一会话的多次请求<strong>共享数据</strong>。</p>
+<p>​	会话追踪方案：1客户端会话跟踪技术Cookie，2服务端会话跟踪技术Session，3令牌技术</p>
+<h6 id="1Cookie技术"><a href="#1Cookie技术" class="headerlink" title="1Cookie技术"></a>1Cookie技术</h6><p>​		会在浏览器端存储一些有效的数据，三个自动，服务器会自动的将Cookie相应给浏览器，浏览器接收到响应回来的数据会自动的将Cookie存储到本地，在后续请求中浏览器会自动的将Cookie携带到服务器端；</p>
+<p>​		优点：HTTP协议中支持的技术</p>
+<p>​		缺点：移动端APP不可以使用，不安全用户可以自己禁用Cookie，Cookie不能跨域；(跨域：指协议、IP或端口有一项不同的请求；)</p>
+<h6 id="2Session"><a href="#2Session" class="headerlink" title="2Session"></a>2Session</h6><p>​		基于Cookie，</p>
+<p>​		优点：存储在服务器端，安全</p>
+<p>​		缺点：单点故障容易造成大的损失，集群环境下无法使用；Cookie缺点（负载均衡nginx）</p>
+<p>​	response header：</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">HTTP/1.1</span> <span class="number">200</span></span><br><span class="line"><span class="attribute">Set-Cookie</span><span class="punctuation">: </span>JSESSIONID=5B40BD1A89DBB2A742E3A4E506244545; Path=/; HttpOnly</span><br><span class="line"><span class="attribute">Content-Type</span><span class="punctuation">: </span>application/json</span><br><span class="line"><span class="attribute">Transfer-Encoding</span><span class="punctuation">: </span>chunked</span><br><span class="line"><span class="attribute">Date</span><span class="punctuation">: </span>Fri, 20 Sep 2024 08:13:47 GMT</span><br><span class="line"><span class="attribute">Keep-Alive</span><span class="punctuation">: </span>timeout=60</span><br><span class="line"><span class="attribute">Connection</span><span class="punctuation">: </span>keep-alive</span><br></pre></td></tr></table></figure>
+
+<p>​	request header</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">GET</span> <span class="string">/s2</span> <span class="meta">HTTP/1.1</span></span><br><span class="line"><span class="attribute">Accept</span><span class="punctuation">: </span>text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</span><br><span class="line"><span class="attribute">Accept-Encoding</span><span class="punctuation">: </span>gzip, deflate, br, zstd</span><br><span class="line"><span class="attribute">Accept-Language</span><span class="punctuation">: </span>zh-CN,zh;q=0.9</span><br><span class="line"><span class="attribute">Connection</span><span class="punctuation">: </span>keep-alive</span><br><span class="line"><span class="attribute">Cookie</span><span class="punctuation">: </span>Idea-773c22b0=50dd3079-2ef5-411b-9663-40cb3779ce56; login_username=itheima; JSESSIONID=5B40BD1A89DBB2A742E3A4E506244545</span><br><span class="line"><span class="attribute">Host</span><span class="punctuation">: </span>localhost:8080</span><br></pre></td></tr></table></figure>
+
+
+
+<h6 id="3令牌技术-主流方案"><a href="#3令牌技术-主流方案" class="headerlink" title="3令牌技术(主流方案)"></a>3令牌技术(主流方案)</h6><p>​	令牌，用户身份的标识，一个字符串，用户合法身份凭证；</p>
+<p>​	在用户登录成功后，服务器会生成一个令牌，响应数据的时候把这个服务器相应给浏览器，浏览器保存到本地，在后续的每一次请求中都需要携带这个令牌到服务器；</p>
+<p>​		优点：支持PC端、移动端；集群环境下可以部署；减少服务器存储压力</p>
+<h5 id="3-JWT令牌"><a href="#3-JWT令牌" class="headerlink" title="3.JWT令牌"></a>3.JWT令牌</h5><p>​	JWT：JSON Web Token(<a target="_blank" rel="noopener" href="https://jwt.io/">https://jwt.io</a>)</p>
+<p>​	定义了一种简洁、自包含的格式；用于双方在通信以json数据格式安全的传输信息。(数字签名)</p>
+<p>​	组成：第一部分(Header)：记录令牌类型、签名算法等</p>
+<p>​		第二部分(Payload有效载荷):携带一些自定义数据，默认信息</p>
+<p>​		第三部分(Signature签名)：防止Token被篡改，通过签名算法加入密钥；</p>
+<h6 id="1JWT-生成"><a href="#1JWT-生成" class="headerlink" title="1JWT-生成"></a>1JWT-生成</h6><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">testContextLoads</span><span class="params">()</span> &#123;</span><br><span class="line">        HashMap&lt;String, Object&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">        <span class="type">Calendar</span> <span class="variable">instance</span> <span class="operator">=</span> Calendar.getInstance();</span><br><span class="line">        <span class="comment">// 2000秒后令牌token失效</span></span><br><span class="line">        instance.add(Calendar.SECOND,<span class="number">2000</span>);</span><br><span class="line">        <span class="type">String</span> <span class="variable">token</span> <span class="operator">=</span> JWT.create()</span><br><span class="line">                .withHeader(map) <span class="comment">// header可以不写，因为默认值就是它</span></span><br><span class="line">                .withClaim(<span class="string">&quot;userId&quot;</span>, <span class="number">21</span>)  <span class="comment">//payload</span></span><br><span class="line">                .withClaim(<span class="string">&quot;username&quot;</span>, <span class="string">&quot;xiaoshuang&quot;</span>)</span><br><span class="line">                .withExpiresAt(instance.getTime()) <span class="comment">// 指定令牌的过期时间</span></span><br><span class="line">                .sign(Algorithm.HMAC256(<span class="string">&quot;XIAOSHUANG&quot;</span>));<span class="comment">//签名算法</span></span><br><span class="line">        System.out.println(token);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Test</span><span class="comment">//Java解析Jwt令牌</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">test</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="comment">// 通过签名生成验证对象</span></span><br><span class="line">        <span class="type">JWTVerifier</span> <span class="variable">jwtVerifier</span> <span class="operator">=</span> JWT.require(Algorithm.HMAC256(<span class="string">&quot;XIAOSHUANG&quot;</span>)).build();</span><br><span class="line">        <span class="type">DecodedJWT</span> <span class="variable">verify</span> <span class="operator">=</span> jwtVerifier.verify(       <span class="string">&quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MjY4MjU0MTIsInVzZXJJZCI6MjEsInVzZXJuYW1lIjoieGlhb3NodWFuZyJ9.7om-ZT-ZDLN8rZrEosiWkE7L25MLDh88YpmmFAm_Zg4&quot;</span>);</span><br><span class="line">        System.out.println(verify.getClaim(<span class="string">&quot;userId&quot;</span>));</span><br><span class="line">        System.out.println(verify.getClaim(<span class="string">&quot;username&quot;</span>));</span><br><span class="line">        System.out.println(<span class="string">&quot;令牌过期时间：&quot;</span>+verify.getExpiresAt());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>​	实操代码</p>
+<p>​	</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--        JWT令牌依赖--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--&lt;groupId&gt;io.jsonwebtoken&lt;/groupId&gt;</span></span><br><span class="line"><span class="comment">            &lt;artifacted&gt;jjwt&lt;/artifacted&gt;</span></span><br><span class="line"><span class="comment">            &lt;version&gt;0.9.1&lt;/version&gt;--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.auth0<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>java-jwt<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.14.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>​	工具类，来源网络大佬<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_46195957/article/details/115326648">JWT最详细教程以及整合SpringBoot的使用（简洁易上手）_jwt教程-CSDN博客</a></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.itheima.utils;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.auth0.jwt.JWT;</span><br><span class="line"><span class="keyword">import</span> com.auth0.jwt.JWTCreator;</span><br><span class="line"><span class="keyword">import</span> com.auth0.jwt.JWTVerifier;</span><br><span class="line"><span class="keyword">import</span> com.auth0.jwt.algorithms.Algorithm;</span><br><span class="line"><span class="keyword">import</span> com.auth0.jwt.interfaces.DecodedJWT;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Calendar;</span><br><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">JwtUtils</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 生成token  header.payload.singature</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">SING</span> <span class="operator">=</span> <span class="string">&quot;XIAOSHUANG&quot;</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">getToken</span><span class="params">(Map&lt;String, String&gt; map)</span> &#123;</span><br><span class="line"></span><br><span class="line">        <span class="type">Calendar</span> <span class="variable">instance</span> <span class="operator">=</span> Calendar.getInstance();</span><br><span class="line">        <span class="comment">// 默认7天过期</span></span><br><span class="line">        instance.add(Calendar.DATE, <span class="number">7</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//创建jwt builder</span></span><br><span class="line">        JWTCreator.<span class="type">Builder</span> <span class="variable">builder</span> <span class="operator">=</span> JWT.create();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// payload</span></span><br><span class="line">        map.forEach((k, v) -&gt; &#123;</span><br><span class="line">            builder.withClaim(k, v);</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        <span class="type">String</span> <span class="variable">token</span> <span class="operator">=</span> builder.withExpiresAt(instance.getTime())  <span class="comment">//指定令牌过期时间</span></span><br><span class="line">                .sign(Algorithm.HMAC256(SING));  <span class="comment">// sign</span></span><br><span class="line">        <span class="keyword">return</span> token;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 验证token  合法性</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> DecodedJWT <span class="title function_">verify</span><span class="params">(String token)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> JWT.require(Algorithm.HMAC256(SING)).build().verify(token);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取token信息方法</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="comment">/*public static DecodedJWT getTokenInfo(String token)&#123;</span></span><br><span class="line"><span class="comment">        DecodedJWT verify = JWT.require(Algorithm.HMAC256(SING)).build().verify(token);</span></span><br><span class="line"><span class="comment">        return verify;</span></span><br><span class="line"><span class="comment">    &#125;*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​	登录控制</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 登录成功下发令牌</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">if</span> (e != <span class="literal">null</span>)&#123;</span><br><span class="line">    Map&lt;String,String&gt; claims = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">    claims.put(<span class="string">&quot;id&quot;</span>,e.getId().toString());</span><br><span class="line">    claims.put(<span class="string">&quot;username&quot;</span>,e.getUsername());</span><br><span class="line">    claims.put(<span class="string">&quot;name&quot;</span>,e.getName());</span><br><span class="line">    <span class="type">String</span> <span class="variable">jwt</span> <span class="operator">=</span> JwtUtils.getToken(claims);</span><br><span class="line">    <span class="keyword">return</span> Result.success(jwt);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//登录失败</span></span><br><span class="line"><span class="keyword">return</span> Result.error(<span class="string">&quot;登陆失败&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="4过滤器Filter"><a href="#4过滤器Filter" class="headerlink" title="4过滤器Filter"></a>4过滤器Filter</h5><p>​	javaweb三大组件之一(Servlet、Filter、Listener)</p>
+<p>​	过滤器可以把对资源的请求拦截下来，从而实现一些特殊的功能</p>
+<p>​	常见的功能：登录效验、同一编码处理、敏感字符处理；</p>
+<h6 id="1Filter快速入门"><a href="#1Filter快速入门" class="headerlink" title="1Filter快速入门"></a>1Filter快速入门</h6><p>​	定义一个类实现Filter接口，并重写它的所有接口</p>
+<p>​	配置Filter，在类上加@WebFilter(urlPatterns &#x3D; “&#x2F;*”)注解，配置拦截资源的路径，引导类上加@ServletComponentScan注解开启Servlet组件支持</p>
+<p>​	该组件由JavaWeb提供，在SpringBoot中使用需在启动类上添加@ServletComponentScan注解</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.itheima.filter;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.WebFilter;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="meta">@WebFilter(urlPatterns = &quot;/*&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DomeFilter</span> <span class="keyword">implements</span> <span class="title class_">Filter</span> &#123;</span><br><span class="line">    <span class="comment">//初始化方法，仅调用一次，可不写</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">init</span><span class="params">(FilterConfig filterConfig)</span> <span class="keyword">throws</span> ServletException &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Filter初始化方法执行了&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//销毁方法，仅调用一次，可不写</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">destroy</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Filter销毁方法执行了&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">doFilter</span><span class="params">(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain)</span></span><br><span class="line">            <span class="keyword">throws</span> IOException, ServletException &#123;</span><br><span class="line">        <span class="comment">//放行前的 逻辑</span></span><br><span class="line">        System.out.println(<span class="string">&quot;放行前...&quot;</span>);</span><br><span class="line">        <span class="comment">//放行操作</span></span><br><span class="line">        filterChain.doFilter(servletRequest,servletResponse);</span><br><span class="line">        <span class="comment">//放行后的 逻辑</span></span><br><span class="line">        System.out.println(<span class="string">&quot;放行后...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h6 id="2详解-执行流程、拦截路径、过滤器链"><a href="#2详解-执行流程、拦截路径、过滤器链" class="headerlink" title="2详解(执行流程、拦截路径、过滤器链)"></a>2详解(执行流程、拦截路径、过滤器链)</h6><p>​	</p>
+<h6 id="3登录效验-Filter"><a href="#3登录效验-Filter" class="headerlink" title="3登录效验-Filter"></a>3登录效验-Filter</h6><h5 id="5拦截器Interceptor"><a href="#5拦截器Interceptor" class="headerlink" title="5拦截器Interceptor"></a>5拦截器Interceptor</h5><h4 id="3异常处理"><a href="#3异常处理" class="headerlink" title="3异常处理"></a>3异常处理</h4>
       
     </div>
 
@@ -245,7 +432,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-09-19 16:04:40" itemprop="dateModified" datetime="2024-09-19T16:04:40+08:00">2024-09-19</time>
+      <time title="Modified: 2024-09-20 20:31:54" itemprop="dateModified" datetime="2024-09-20T20:31:54+08:00">2024-09-20</time>
     </span>
 
   
@@ -259,14 +446,14 @@
     
     <div class="post-body" itemprop="articleBody">
           <h1 id="开发实操"><a href="#开发实操" class="headerlink" title="开发实操"></a>开发实操</h1><p>data:2024-09-15 18:41:30</p>
-<h3 id="开发规范"><a href="#开发规范" class="headerlink" title="开发规范"></a>开发规范</h3><h4 id="1-基于前后端分离开发"><a href="#1-基于前后端分离开发" class="headerlink" title="1.基于前后端分离开发"></a>1.基于前后端分离开发</h4><img src="D:\Java\tool\myBlog\blog\public\images\image-20240915184105669.png" style="zoom:67%;" />
+<h3 id="开发规范"><a href="#开发规范" class="headerlink" title="开发规范"></a>开发规范</h3><h4 id="1-基于前后端分离开发"><a href="#1-基于前后端分离开发" class="headerlink" title="1.基于前后端分离开发"></a>1.基于前后端分离开发</h4><img src="assets/image-20240915184105669.png" style="zoom:67%;" />
 
 <h4 id="2-Restful"><a href="#2-Restful" class="headerlink" title="2.Restful"></a>2.Restful</h4><p>​	表述性状态转换，一种软件架构风格</p>
-<img src="D:\Java\tool\myBlog\blog\public\images\image-20240915184329884.png" style="zoom:67%;" />
+<img src="assets/image-20240915184329884.png" style="zoom:67%;" />
 
 <p>​	restful是传统风格的规范化，URL定位资源，http动词(get,post…)描述操作</p>
 <p>加s表示此类资源；前后端使用result作为返回对象</p>
-<img src="D:\Java\tool\myBlog\blog\public\images\image-20240915184447873.png" style="zoom:67%;" />
+<img src="assets/image-20240915184447873.png" style="zoom:67%;" />
 
 
 
@@ -302,7 +489,7 @@
 
 <p>​	然后再一路回调到controller层，调用Result方法响应前端请求；</p>
 <h5 id="2-前后端联调"><a href="#2-前后端联调" class="headerlink" title="2.前后端联调"></a>2.前后端联调</h5><p>​	结合开发的前端环境来调试后端程序</p>
-<img src="D:\Java\tool\myBlog\blog\public\images\image-20240916224741477.png" alt="image-20240916224741477" style="zoom: 67%;" />
+<img src="assets/image-20240916224741477.png" alt="image-20240916224741477" style="zoom: 67%;" />
 
 <p>​	可以看到刷新后，数据成功渲染至前端页面</p>
 <p>​	小结：明确需求，结合接口文档，进行思路分析，在进行接口开发；</p>
@@ -346,7 +533,7 @@
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;code&quot;</span><span class="punctuation">:</span><span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;msg&quot;</span><span class="punctuation">:</span><span class="string">&quot;success&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;data&quot;</span><span class="punctuation">:</span><span class="literal"><span class="keyword">null</span></span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 
 <p>​	思路分析：</p>
-<img src="D:\Java\tool\myBlog\blog\public\images\image-20240916225921905.png" alt="image-20240916225921905" style="zoom:67%;" />
+<img src="assets/image-20240916225921905.png" alt="image-20240916225921905" style="zoom:67%;" />
 
 <p>​	具体实现：先在controller层接收前端的delete请求，调用service层delete方法；然后再service接口实现类中，调用mapper层delete方法实现service层delete方法，然后再去mapper层编写相关删除代码；</p>
 <p>​	controller层：注意上方有无@Autowired注解，自动填装service相关对象</p>
@@ -384,10 +571,7 @@
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">	<span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;教研部&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 
 <p>​	思路</p>
-<img src="D:\Java\tool\myBlog\blog\public\images\image-20240916232956722.png" alt="image-20240916232956722" style="zoom:67%;" />
-
-
-
+<p><img src="/assets/image-20240916232956722.png" alt="image-20240916232956722"></p>
 <h6 id="响应数据"><a href="#响应数据" class="headerlink" title="响应数据"></a>响应数据</h6><p>​	参数格式：application&#x2F;json</p>
 <p>​	参数说明：</p>
 <table>
@@ -436,7 +620,7 @@
 
 <p>​	此处m为查询后起始位置，n为每页记录数量；</p>
 <p>​	仅需回应查询后地表格和总记录数量</p>
-<img src="D:\Java\tool\myBlog\blog\public\images\image-20240918151337626.png" alt="image-20240918151337626" style="zoom:67%;" />
+<img src="assets/image-20240918151337626.png" alt="image-20240918151337626" style="zoom:67%;" />
 
 <p>​	参数格式：queryString</p>
 <p>​	参数说明：</p>
@@ -635,7 +819,7 @@
 <p>​	响应数据样例：</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;code&quot;</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;msg&quot;</span><span class="punctuation">:</span> <span class="string">&quot;success&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;data&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;total&quot;</span><span class="punctuation">:</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;rows&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">       <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;username&quot;</span><span class="punctuation">:</span> <span class="string">&quot;jinyong&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;password&quot;</span><span class="punctuation">:</span> <span class="string">&quot;123456&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;金庸&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;gender&quot;</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;image&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://web-framework.oss-cn-hangzhou.aliyuncs.com/2022-09-02-00-27-53B.jpg&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;job&quot;</span><span class="punctuation">:</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;entrydate&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2015-01-01&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;deptId&quot;</span><span class="punctuation">:</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;createTime&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2022-09-01T23:06:30&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;updateTime&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2022-09-02T00:29:04&quot;</span></span><br><span class="line">      <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;username&quot;</span><span class="punctuation">:</span> <span class="string">&quot;zhangwuji&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;password&quot;</span><span class="punctuation">:</span> <span class="string">&quot;123456&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;张无忌&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;gender&quot;</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;image&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://web-framework.oss-cn-hangzhou.aliyuncs.com/2022-09-02-00-27-53B.jpg&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;job&quot;</span><span class="punctuation">:</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;entrydate&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2015-01-01&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;deptId&quot;</span><span class="punctuation">:</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;createTime&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2022-09-01T23:06:30&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;updateTime&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2022-09-02T00:29:04&quot;</span></span><br><span class="line">      <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 
-<h5 id="2具体思路"><a href="#2具体思路" class="headerlink" title="2具体思路"></a>2具体思路</h5><img src="D:\Java\tool\myBlog\blog\public\images\image-20240918153059692.png" alt="image-20240918153059692" style="zoom:67%;" />
+<h5 id="2具体思路"><a href="#2具体思路" class="headerlink" title="2具体思路"></a>2具体思路</h5><img src="./../../public/images/image-20240918153059692.png" alt="image-20240918153059692" style="zoom:67%;" />
 
 <p>​	先在mapper层设计count方法和page方法，与数据库交互获得总记录个数和记录数据</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="keyword">private</span> EmpService empService;</span><br><span class="line"><span class="meta">@GetMapping(&quot;/emps&quot;)</span></span><br><span class="line"><span class="keyword">public</span> Result <span class="title function_">page</span><span class="params">(<span class="meta">@RequestParam(defaultValue = &quot;1&quot;)</span> Integer page,</span></span><br><span class="line"><span class="params">                   <span class="meta">@RequestParam(defaultValue = &quot;10&quot;)</span> Integer pageSize)</span>&#123;</span><br><span class="line">    <span class="comment">//实现设置默认值,if判断比较麻烦，可以使用注解</span></span><br><span class="line">    log.info(<span class="string">&quot;分页查询员工表，参数：&#123;&#125;，&#123;&#125;&quot;</span>,page,pageSize);</span><br><span class="line">    <span class="comment">//调用service方法</span></span><br><span class="line">    <span class="type">PageBean</span> <span class="variable">pageBean</span> <span class="operator">=</span> empService.page(page-<span class="number">1</span>,pageSize);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> Result.success(pageBean);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -655,7 +839,7 @@
 
 
 
-<h5 id="5条件分页查询"><a href="#5条件分页查询" class="headerlink" title="5条件分页查询"></a>5条件分页查询</h5><p>​	<img src="D:\Java\tool\myBlog\blog\public\images\image-20240918165112186.png" alt="image-20240918165112186" /></p>
+<h5 id="5条件分页查询"><a href="#5条件分页查询" class="headerlink" title="5条件分页查询"></a>5条件分页查询</h5><p>​	<img src="assets/image-20240918165112186.png" alt="image-20240918165112186" /></p>
 <h5 id="6使用动态SQL"><a href="#6使用动态SQL" class="headerlink" title="6使用动态SQL"></a>6使用动态SQL</h5><p>​	使用静态SQL语句太过麻烦，代码结构变得臃肿</p>
 <p>​	使用xml映射文件动态配置SQL条件，三点规范</p>
 <p>​	1同包同名，2引入规则，配置namespace  3，SQL语句的id要与mapper语句中方法名一致</p>
@@ -929,9 +1113,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2024-09-15 11:56:30 / Modified: 11:56:17" itemprop="dateCreated datePublished" datetime="2024-09-15T11:56:30+08:00">2024-09-15</time>
+      <time title="Created: 2024-09-15 11:56:30" itemprop="dateCreated datePublished" datetime="2024-09-15T11:56:30+08:00">2024-09-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2024-09-20 20:27:48" itemprop="dateModified" datetime="2024-09-20T20:27:48+08:00">2024-09-20</time>
     </span>
 
   
@@ -945,22 +1135,22 @@
     
     <div class="post-body" itemprop="articleBody">
           <h1 id="Mybatis"><a href="#Mybatis" class="headerlink" title="Mybatis"></a>Mybatis</h1><h2 id="1-MyBatis的操作"><a href="#1-MyBatis的操作" class="headerlink" title="1.MyBatis的操作"></a>1.MyBatis的操作</h2><h4 id="1-1防SQL注入"><a href="#1-1防SQL注入" class="headerlink" title="1.1防SQL注入"></a>1.1防SQL注入</h4><p>由于在使用${}插入数据时是做字符拼接，会有注入风险性</p>
-<img src="E:\tool\typora\image\mabatisStudy\view1.png" alt="view1" style="zoom: 67%;" />
+<img src="assets/view1.png" alt="view1" style="zoom: 67%;" />
 
-<img src="E:\tool\typora\image\mabatisStudy\code1.png" alt="code1" style="zoom:67%;" />
+<img src="assets/code1.png" alt="code1" style="zoom:67%;" />
 
 <p>此处有可能会造成误判，需使用#{}注入，可以防止此类情况发送</p>
-<p><img src="E:\tool\typora\image\mabatisStudy\code2.1.png" alt="code2"></p>
+<p><img src="/assets/code2.1.png" alt="code2"></p>
 <p>代码如下</p>
-<p><img src="E:\tool\typora\image\mabatisStudy\code1.3.png" alt="code1.3"></p>
+<p><img src="/assets/code1.3.png" alt="code1.3"></p>
 <h4 id="1-2mybatis的插入数据操作"><a href="#1-2mybatis的插入数据操作" class="headerlink" title="1.2mybatis的插入数据操作"></a>1.2mybatis的插入数据操作</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Options(useGeneratedKeys = true,keyProperty = &quot;id&quot;)</span></span><br><span class="line">    <span class="meta">@Insert(&quot;insert into emp(username, name, gender, image, job, entrydate, dept_id, create_time, update_time)\n&quot; +</span></span><br><span class="line"><span class="meta">            &quot; values (#&#123;username&#125;,#&#123;name&#125;,#&#123;gender&#125;,#&#123;image&#125;,#&#123;job&#125;,#&#123;entrydate&#125;,#&#123;deptId&#125;,#&#123;createTime&#125;,#&#123;updateTime&#125;);&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">insert</span><span class="params">(Emp emp)</span>;</span><br></pre></td></tr></table></figure>
 
-<img src="E:\tool\typora\image\mabatisStudy\code2.2.png" alt="code2.2" style="zoom:80%;" />
+<img src="assets/code2.2.png" alt="code2.2" style="zoom:80%;" />
 
 <p>有关新增返回值,插入代码</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Options(useGeneratedKeys = true,keyProperty = &quot;id&quot;)</span></span><br></pre></td></tr></table></figure>
 
-<img src="E:\tool\typora\image\mabatisStudy\code1.2.2.png" alt="code1.2.2" style="zoom:67%;" />
+<img src="assets/code1.2.2.png" alt="code1.2.2" style="zoom:67%;" />
 
 <h4 id="1-3删除操作"><a href="#1-3删除操作" class="headerlink" title="1.3删除操作"></a>1.3删除操作</h4><p>首先在mapper接口里面写入代码</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//删除操作</span></span><br><span class="line"><span class="meta">@Delete(&quot;delete from emp where id=#&#123;id&#125;&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="type">int</span> <span class="title function_">delete</span><span class="params">(Integer id)</span>;</span><br></pre></td></tr></table></figure>
@@ -969,7 +1159,7 @@
 <p>再在测试代码内写入下面代码测试</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> EmpMapper empMapper;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">testDelete</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">delete</span> <span class="operator">=</span>  empMapper.delete(<span class="number">19</span>);</span><br><span class="line">        System.out.println(delete+<span class="string">&quot;\tdelete complete&quot;</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="E:\tool\typora\image\mabatisStudy\code1.1.3.png" alt="code1.1.3"></p>
+<p><img src="/assets/code1.1.3.png" alt="code1.1.3"></p>
 <h4 id="1-4更新操作"><a href="#1-4更新操作" class="headerlink" title="1.4更新操作"></a>1.4更新操作</h4><p>sql语句</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#更新操作</span><br><span class="line">update emp set username=&#x27;&#x27;,name=&#x27;&#x27;,gender=&#x27;&#x27;,image=&#x27;&#x27;,job=&#x27;&#x27;,entrydate=&#x27;&#x27;,dept_id=&#x27;&#x27;,update_time=&#x27;&#x27; where id = 1;</span><br></pre></td></tr></table></figure>
 
@@ -982,7 +1172,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">testUpdate</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">Emp</span> <span class="variable">emp</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Emp</span>();</span><br><span class="line">    emp.setId(<span class="number">30</span>);</span><br><span class="line">    emp.setUsername(<span class="string">&quot;Jerry1&quot;</span>);</span><br><span class="line">    emp.setName(<span class="string">&quot;Tom1&quot;</span>);</span><br><span class="line">    emp.setImage(<span class="string">&quot;#&quot;</span>);</span><br><span class="line">    emp.setGender((<span class="type">short</span>)<span class="number">1</span>);</span><br><span class="line">    emp.setJob((<span class="type">short</span>)<span class="number">1</span>);</span><br><span class="line">    emp.setEntrydate(LocalDate.of(<span class="number">2000</span>,<span class="number">1</span>,<span class="number">1</span>));</span><br><span class="line">    emp.setUpdateTime(LocalDateTime.now());</span><br><span class="line">    emp.setDeptId(<span class="number">1</span>);</span><br><span class="line">    empMapper.update(emp);</span><br><span class="line">    System.out.println(emp.getId());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>如图</p>
-<img src="E:\tool\typora\image\mabatisStudy\code1.1.4.png" alt="code1.1.4" style="zoom:80%;" />
+<img src="assets/code1.1.4.png" alt="code1.1.4" style="zoom:80%;" />
 
 <h4 id="1-5查询"><a href="#1-5查询" class="headerlink" title="1.5查询"></a>1.5查询</h4><h5 id="根据id查询单条记录"><a href="#根据id查询单条记录" class="headerlink" title="根据id查询单条记录"></a>根据id查询单条记录</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//单查询，一条结果，直接new一个对象就行，不需要list</span></span><br><span class="line"><span class="meta">@Select(&quot;select * from emp where id =#&#123;id&#125;&quot;)</span></span><br><span class="line"><span class="keyword">public</span> Emp <span class="title function_">getById</span><span class="params">(Integer id)</span>;</span><br></pre></td></tr></table></figure>
 
@@ -1020,7 +1210,7 @@
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span> ?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">mapper</span></span></span><br><span class="line"><span class="meta">        <span class="keyword">PUBLIC</span> <span class="string">&quot;-//mybatis.org//DTD Mapper 3.0//EN&quot;</span></span></span><br><span class="line"><span class="meta">        <span class="string">&quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mapper</span> <span class="attr">namespace</span>=<span class="string">&quot;com.itheima.mapper.EmpMapper&quot;</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--    resultType:单条记录封装的类型--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;list&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;com.itheima.pojo.Emp&quot;</span>&gt;</span></span><br><span class="line">        select * from emp where id = #&#123;id&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mapper</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>好处：SQL语句与代码分离，更改xml文件不需要重启项目，更适合大型项目和复杂SQL语句；</p>
-<img src="E:\tool\typora\image\mabatisStudy\view1.1.6.jpg" alt="view1.1.6" style="zoom:80%;" />
+<img src="assets/view1.1.6.jpg" alt="view1.1.6" style="zoom:80%;" />
 
 <h4 id="1-7"><a href="#1-7" class="headerlink" title="1.7"></a>1.7</h4>
       
